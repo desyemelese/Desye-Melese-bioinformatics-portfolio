@@ -1,622 +1,265 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desye Melese Sisay | Senior Bioinformatician & Consultant</title>
-    <meta name="description" content="Official website of Desye Melese Sisay, Senior Bioinformatician and Computational Biologist offering consulting, training modules in ETB, and analytics in NGS, GROMACS, and vaccine design.">
-    <meta name="keywords" content="Desye Melese Sisay, Bioinformatician, Bioinformatics Consultant, GROMACS, Immunoinformatics, NGS, Vaccine Design, Ethiopia Bioinformatics">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: { 50: '#f0fdfa', 500: '#14b8a6', 600: '#0d9488', 900: '#134e4a' }
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body class="bg-slate-900 text-slate-100 antialiased font-sans">
-
-    <!-- Navigation Header -->
-    <nav class="fixed top-0 w-full bg-slate-900/90 backdrop-blur z-50 border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold tracking-wide text-brand-500">Desye Melese Sisay</a>
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
-                <a href="#about" class="hover:text-brand-500 transition">About</a>
-                <a href="#services" class="hover:text-brand-500 transition">Services</a>
-                <a href="#expertise" class="hover:text-brand-500 transition">Skills & Tools</a>
-                <a href="#training" class="hover:text-brand-500 transition">Training (ETB)</a>
-                <a href="#publications" class="hover:text-brand-500 transition">Publications</a>
-                <a href="#contact" class="hover:text-brand-500 transition">Contact</a>
-            </div>
-            <a href="#contact" class="bg-brand-600 hover:bg-brand-500 text-white px-4 py-2 rounded-lg text-sm font-semibold transition">Hire / Consult</a>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-6 max-w-7xl mx-auto text-center md:text-left md:flex items-center justify-between">
-        <div class="md:w-3/5 space-y-6">
-            <span class="bg-brand-900/60 text-brand-500 border border-brand-500/30 text-xs px-3 py-1 rounded-full uppercase tracking-wider font-semibold">
-                Senior Bioinformatician & Computational Biologist
-            </span>
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
-                Transforming Biological Data into Actionable Discovery
-            </h1>
-            <p class="text-lg text-slate-400 leading-relaxed">
-                Specialized in NGS data analysis, reverse vaccinology, molecular diagnostics, Machine Learning, structural dynamics (GROMACS/Vina), and custom pipeline automation for academia and biotech.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                <a href="#contact" class="bg-brand-600 hover:bg-brand-500 text-white px-6 py-3 rounded-lg font-semibold text-center transition">Request Consultation</a>
-                <a href="#training" class="border border-slate-700 hover:border-slate-500 text-slate-300 px-6 py-3 rounded-lg font-semibold text-center transition">Explore Training Modules</a>
-            </div>
-        </div>
-        <div class="md:w-1/3 mt-12 md:mt-0 flex justify-center">
-            <img 
-                src="desye-profile.jpg" 
-                alt="Desye Melese Sisay" 
-                onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Desye+Melese+Sisay&background=0d9488&color=fff&size=256';"
-                class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-brand-500 shadow-2xl"
-            />
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-16 bg-slate-950/40 border-y border-slate-800 px-6">
-        <div class="max-w-5xl mx-auto text-center space-y-4">
-            <h2 class="text-3xl font-bold text-white">About Desye Melese Sisay</h2>
-            <p class="text-slate-300 leading-relaxed text-base md:text-lg">
-                Desye Melese Sisay is a Senior Bioinformatician and Computational Biologist specializing in data-driven biological discovery. Expert in structural bioinformatics, biomolecular modeling, molecular dynamics, and custom pipeline engineering using Python and R. Offering end-to-end analytical services, data visualization, capacity building, and research consulting for biotech and academia.
-            </p>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-white">Bioinformatics & Analytical Services</h2>
-            <p class="text-slate-400 mt-2">End-to-end computational biology solutions for research groups, clinical institutions, and biotech firms.</p>
-        </div>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-slate-900 p-8 rounded-xl border border-slate-800 hover:border-brand-500/50 transition">
-                <i class="fa-solid fa-syringe text-3xl text-brand-500 mb-4"></i>
-                <h3 class="text-xl font-bold text-white mb-2">Reverse Vaccinology & Vaccine Engineering</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Multi-epitope vaccine construct (MEVC) design, recombinant antigen engineering for wild-type & escape mutant variants, immunodominant domain selection, and immune simulation.</p>
-            </div>
-            <div class="bg-slate-900 p-8 rounded-xl border border-slate-800 hover:border-brand-500/50 transition">
-                <i class="fa-solid fa-dna text-3xl text-brand-500 mb-4"></i>
-                <h3 class="text-xl font-bold text-white mb-2">NGS Data Analysis & Genomics</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">RNA-Seq differential expression, Whole Genome Sequencing (WGS), variant calling and annotation (GATK), metagenomics, and comparative phylogenomics.</p>
-            </div>
-            <div class="bg-slate-900 p-8 rounded-xl border border-slate-800 hover:border-brand-500/50 transition">
-                <i class="fa-solid fa-cubes text-3xl text-brand-500 mb-4"></i>
-                <h3 class="text-xl font-bold text-white mb-2">Structural Modeling & MD Simulations</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Protein 3D modeling (AlphaFold2/MODELLER), receptor-ligand molecular docking (AutoDock Vina), extended GROMACS MD simulations, and MM/PBSA binding free energy calculation.</p>
-            </div>
-            <div class="bg-slate-900 p-8 rounded-xl border border-slate-800 hover:border-brand-500/50 transition">
-                <i class="fa-solid fa-vial-circle-check text-3xl text-brand-500 mb-4"></i>
-                <h3 class="text-xl font-bold text-white mb-2">Diagnostics & Biomarker Discovery</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Molecular diagnostics target selection, biomarker identification, high-specificity multiplex PCR/qPCR primer design, and off-target cross-reactivity profiling.</p>
-            </div>
-            <div class="bg-slate-900 p-8 rounded-xl border border-slate-800 hover:border-brand-500/50 transition">
-                <i class="fa-solid fa-diagram-project text-3xl text-brand-500 mb-4"></i>
-                <h3 class="text-xl font-bold text-white mb-2">Pipeline Automation & Machine Learning</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Custom bioinformatics pipeline development using Nextflow, Snakemake, Python, and R, alongside Machine Learning models for biological feature classification.</p>
-            </div>
-            <div class="bg-slate-900 p-8 rounded-xl border border-slate-800 hover:border-brand-500/50 transition">
-                <i class="fa-solid fa-pills text-3xl text-brand-500 mb-4"></i>
-                <h3 class="text-xl font-bold text-white mb-2">Drug Repurposing & Target Screening</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">Virtual screening of small molecules, natural products, and antiparasitic compounds against receptors, channels, and metabolic enzymes.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Comprehensive Skills Grid with Click-to-Open Details -->
-    <section id="expertise" class="py-20 px-6 max-w-7xl mx-auto border-t border-slate-800">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-white">Comprehensive Technical & Domain Skills</h2>
-            <p class="text-slate-400 mt-2">Click any category below to open deep technical workflows, algorithms, and toolsets.</p>
+<!-- Dashboard Navigation Bar -->
+<header class="bg-slate-900 border-b border-slate-800 sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center gap-4">
+        <div class="flex items-center space-x-3">
+            <span class="w-3 h-3 bg-brand-500 rounded-full animate-pulse"></span>
+            <h1 class="text-lg font-bold text-white tracking-wide">Academic & Research Portal</h1>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6">
-
-            <!-- Category 1 -->
-            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-                <div>
-                    <i class="fa-solid fa-microscope text-3xl text-brand-500 mb-3"></i>
-                    <h3 class="text-lg font-bold text-white mb-3">NGS & Genomics</h3>
-                    <ul class="text-sm text-slate-400 space-y-2 mb-4">
-                        <li>• RNA-Seq Differential Expression (DESeq2, edgeR)</li>
-                        <li>• Whole Genome Sequencing (WGS) & Resequencing</li>
-                        <li>• Variant Calling & Annotation (GATK, FreeBayes)</li>
-                        <li>• Metagenomics & Microbiome (QIIME2, Kraken2)</li>
-                    </ul>
-                </div>
-                <button onclick="openSkillModal('ngs')" class="text-xs text-brand-500 hover:text-brand-400 font-semibold border border-brand-500/30 rounded-lg px-3 py-2 text-center w-full bg-brand-900/20 hover:bg-brand-900/40 transition">
-                    <i class="fa-solid fa-circle-info mr-1"></i> View Deep Details & Tools
-                </button>
-            </div>
-
-            <!-- Category 2 -->
-            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-                <div>
-                    <i class="fa-solid fa-shield-halved text-3xl text-brand-500 mb-3"></i>
-                    <h3 class="text-lg font-bold text-white mb-3">Vaccine & Antigen Design</h3>
-                    <ul class="text-sm text-slate-400 space-y-2 mb-4">
-                        <li>• Epitope Mapping (HTL/CTL/B-cell)</li>
-                        <li>• Wild-type & Escape Mutant Antigens</li>
-                        <li>• Linker Engineering & Adjuvants</li>
-                        <li>• Immune Simulation (C-ImmSim)</li>
-                    </ul>
-                </div>
-                <button onclick="openSkillModal('vaccine')" class="text-xs text-brand-500 hover:text-brand-400 font-semibold border border-brand-500/30 rounded-lg px-3 py-2 text-center w-full bg-brand-900/20 hover:bg-brand-900/40 transition">
-                    <i class="fa-solid fa-circle-info mr-1"></i> View Deep Details & Tools
-                </button>
-            </div>
-
-            <!-- Category 3 -->
-            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-                <div>
-                    <i class="fa-solid fa-vial text-3xl text-brand-500 mb-3"></i>
-                    <h3 class="text-lg font-bold text-white mb-3">Diagnostics & Biomarkers</h3>
-                    <ul class="text-sm text-slate-400 space-y-2 mb-4">
-                        <li>• Diagnostic Biomarker Feature Selection</li>
-                        <li>• High-Specificity Primer Design (qPCR/Multiplex)</li>
-                        <li>• Target Gene Selection for Molecular Diagnosis</li>
-                        <li>• Off-target Cross-reactivity Screening</li>
-                    </ul>
-                </div>
-                <button onclick="openSkillModal('diagnostics')" class="text-xs text-brand-500 hover:text-brand-400 font-semibold border border-brand-500/30 rounded-lg px-3 py-2 text-center w-full bg-brand-900/20 hover:bg-brand-900/40 transition">
-                    <i class="fa-solid fa-circle-info mr-1"></i> View Deep Details & Tools
-                </button>
-            </div>
-
-            <!-- Category 4 -->
-            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-                <div>
-                    <i class="fa-solid fa-atom text-3xl text-brand-500 mb-3"></i>
-                    <h3 class="text-lg font-bold text-white mb-3">Structural Biology & MD</h3>
-                    <ul class="text-sm text-slate-400 space-y-2 mb-4">
-                        <li>• AlphaFold2 & MODELLER Structure Prediction</li>
-                        <li>• Docking (AutoDock Vina, HADDOCK)</li>
-                        <li>• Extended GROMACS MD Simulations</li>
-                        <li>• Free Energy Calculations (MM/PBSA)</li>
-                    </ul>
-                </div>
-                <button onclick="openSkillModal('structural')" class="text-xs text-brand-500 hover:text-brand-400 font-semibold border border-brand-500/30 rounded-lg px-3 py-2 text-center w-full bg-brand-900/20 hover:bg-brand-900/40 transition">
-                    <i class="fa-solid fa-circle-info mr-1"></i> View Deep Details & Tools
-                </button>
-            </div>
-
-            <!-- Category 5 -->
-            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-                <div>
-                    <i class="fa-solid fa-brain text-3xl text-brand-500 mb-3"></i>
-                    <h3 class="text-lg font-bold text-white mb-3">Programming & Machine Learning</h3>
-                    <ul class="text-sm text-slate-400 space-y-2 mb-4">
-                        <li>• Python (Biopython, pandas, scikit-learn)</li>
-                        <li>• R Programming (Bioconductor, DESeq2)</li>
-                        <li>• Machine Learning Classifiers (Random Forest, SVM)</li>
-                        <li>• Shell Scripting & HPC Job Scheduling (SLURM)</li>
-                    </ul>
-                </div>
-                <button onclick="openSkillModal('ml')" class="text-xs text-brand-500 hover:text-brand-400 font-semibold border border-brand-500/30 rounded-lg px-3 py-2 text-center w-full bg-brand-900/20 hover:bg-brand-900/40 transition">
-                    <i class="fa-solid fa-circle-info mr-1"></i> View Deep Details & Tools
-                </button>
-            </div>
-
-            <!-- Category 6 -->
-            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-                <div>
-                    <i class="fa-solid fa-code-branch text-3xl text-brand-500 mb-3"></i>
-                    <h3 class="text-lg font-bold text-white mb-3">Workflows & Pipelines</h3>
-                    <ul class="text-sm text-slate-400 space-y-2 mb-4">
-                        <li>• Nextflow & Snakemake Pipeline Engineering</li>
-                        <li>• Docker & Singularity Containerization</li>
-                        <li>• Spatial & GeoPandas Density Mapping</li>
-                        <li>• Cloud & Local HPC Deployment</li>
-                    </ul>
-                </div>
-                <button onclick="openSkillModal('workflows')" class="text-xs text-brand-500 hover:text-brand-400 font-semibold border border-brand-500/30 rounded-lg px-3 py-2 text-center w-full bg-brand-900/20 hover:bg-brand-900/40 transition">
-                    <i class="fa-solid fa-circle-info mr-1"></i> View Deep Details & Tools
-                </button>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- 10 Full Training Modules Section -->
-    <section id="training" class="py-20 px-6 max-w-7xl mx-auto border-t border-slate-800">
-        <div class="text-center mb-16">
-            <span class="bg-brand-900/60 text-brand-500 border border-brand-500/30 text-xs px-3 py-1 rounded-full uppercase tracking-wider font-semibold">
-                Capacity Building & Workshops
-            </span>
-            <h2 class="text-3xl font-bold text-white mt-4">10 Specialized Training Modules</h2>
-            <p class="text-slate-400 mt-2">Hands-on bioinformatics and computational biology programs with costs listed in Ethiopian Birr (ETB).</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- Module 1 -->
-            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-                <div>
-                    <div class="flex justify-between items-center mb-3">
-                        <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-full font-medium">4 Weeks</span>
-                        <span class="text-base font-bold text-brand-500">3,500 ETB</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Module 1: Linux & Command-Line for Bioinformaticians</h3>
-                    <p class="text-slate-400 text-xs mb-4">Mastering Linux OS, file systems, Bash automation, grep/awk, remote SSH servers, and HPC SLURM jobs.</p>
-                </div>
-                <button onclick="setTrainingModule('Module 1: Linux & Command-Line (3,500 ETB)')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold py-2.5 rounded-lg transition">
-                    Register (3,500 ETB)
-                </button>
-            </div>
-
-            <!-- Module 2 -->
-            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-                <div>
-                    <div class="flex justify-between items-center mb-3">
-                        <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-full font-medium">4 Weeks</span>
-                        <span class="text-base font-bold text-brand-500">4,000 ETB</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Module 2: Python Programming & Biopython Data Wrangling</h3>
-                    <p class="text-slate-400 text-xs mb-4">Python scripting, FASTA/FASTQ parsing, Pandas dataframes, Biopython, and sequence manipulation scripts.</p>
-                </div>
-                <button onclick="setTrainingModule('Module 2: Python & Biopython (4,000 ETB)')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold py-2.5 rounded-lg transition">
-                    Register (4,000 ETB)
-                </button>
-            </div>
-
-            <!-- Module 3 -->
-            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-                <div>
-                    <div class="flex justify-between items-center mb-3">
-                        <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-full font-medium">4 Weeks</span>
-                        <span class="text-base font-bold text-brand-500">4,000 ETB</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Module 3: R Programming & Genomic Data Visualization</h3>
-                    <p class="text-slate-400 text-xs mb-4">R fundamentals, tidyverse, Bioconductor packages, heatmaps, volcano plots, PCA plots, and publication-ready graphics using ggplot2.</p>
-                </div>
-                <button onclick="setTrainingModule('Module 3: R & Data Visualization (4,000 ETB)')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold py-2.5 rounded-lg transition">
-                    Register (4,000 ETB)
-                </button>
-            </div>
-
-            <!-- Module 4 -->
-            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between border-brand-500/30">
-                <div>
-                    <div class="flex justify-between items-center mb-3">
-                        <span class="text-xs bg-brand-900 text-brand-400 px-2.5 py-1 rounded-full font-medium">6 Weeks | High Demand</span>
-                        <span class="text-base font-bold text-brand-500">5,000 ETB</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Module 4: Reverse Vaccinology & MEVC Engineering</h3>
-                    <p class="text-slate-400 text-xs mb-4">HTL/CTL/B-cell epitope prediction, mutant variant antigen design, linker selection, adjuvants, and C-ImmSim immune simulation.</p>
-                </div>
-                <button onclick="setTrainingModule('Module 4: Reverse Vaccinology & MEVC (5,000 ETB)')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold py-2.5 rounded-lg transition">
-                    Register (5,000 ETB)
-                </button>
-            </div>
-
-            <!-- Module 5 -->
-            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-                <div>
-                    <div class="flex justify-between items-center mb-3">
-                        <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-full font-medium">6 Weeks</span>
-                        <span class="text-base font-bold text-brand-500">5,500 ETB</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Module 5: NGS RNA-Seq Differential Gene Expression</h3>
-                    <p class="text-slate-400 text-xs mb-4">Quality control (FastQC), alignment (STAR/HISAT2), gene quantification (featureCounts), and differential expression analysis (DESeq2).</p>
-                </div>
-                <button onclick="setTrainingModule('Module 5: NGS RNA-Seq Analysis (5,500 ETB)')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold py-2.5 rounded-lg transition">
-                    Register (5,500 ETB)
-                </button>
-            </div>
-
-            <!-- Module 6 -->
-            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-                <div>
-                    <div class="flex justify-between items-center mb-3">
-                        <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-full font-medium">6 Weeks</span>
-                        <span class="text-base font-bold text-brand-500">5,500 ETB</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Module 6: WGS Variant Calling & Phylogenomics</h3>
-                    <p class="text-slate-400 text-xs mb-4">Whole Genome Sequencing analysis, GATK Best Practices, variant annotation (SnpEff/ANNOVAR), microRNA repertoire analysis, and phylogenetic trees.</p>
-                </div>
-                <button onclick="setTrainingModule('Module 6: WGS & Phylogenomics (5,500 ETB)')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold py-2.5 rounded-lg transition">
-                    Register (5,500 ETB)
-                </button>
-            </div>
-
-            <!-- Module 7 -->
-            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-                <div>
-                    <div class="flex justify-between items-center mb-3">
-                        <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-full font-medium">5 Weeks</span>
-                        <span class="text-base font-bold text-brand-500">4,500 ETB</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Module 7: Primer Design & Molecular Diagnostics</h3>
-                    <p class="text-slate-400 text-xs mb-4">Diagnostic biomarker identification, highly specific primer/probe design (PCR, qPCR, Multiplex), melting temperature optimization, and off-target BLAST screening.</p>
-                </div>
-                <button onclick="setTrainingModule('Module 7: Primer Design & Diagnostics (4,500 ETB)')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold py-2.5 rounded-lg transition">
-                    Register (4,500 ETB)
-                </button>
-            </div>
-
-            <!-- Module 8 -->
-            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between border-brand-500/30">
-                <div>
-                    <div class="flex justify-between items-center mb-3">
-                        <span class="text-xs bg-brand-900 text-brand-400 px-2.5 py-1 rounded-full font-medium">6 Weeks | Advanced</span>
-                        <span class="text-base font-bold text-brand-500">6,500 ETB</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Module 8: Molecular Docking & GROMACS MD Simulation</h3>
-                    <p class="text-slate-400 text-xs mb-4">3D structure preparation, AutoDock Vina, PyMOL visualization, 100-200ns GROMACS MD runs, RMSD/RMSF, and MM/PBSA binding free energy calculation.</p>
-                </div>
-                <button onclick="setTrainingModule('Module 8: Docking & GROMACS MD (6,500 ETB)')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold py-2.5 rounded-lg transition">
-                    Register (6,500 ETB)
-                </button>
-            </div>
-
-            <!-- Module 9 -->
-            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-                <div>
-                    <div class="flex justify-between items-center mb-3">
-                        <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-full font-medium">6 Weeks</span>
-                        <span class="text-base font-bold text-brand-500">6,000 ETB</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Module 9: Machine Learning for Computational Biology</h3>
-                    <p class="text-slate-400 text-xs mb-4">Scikit-learn, feature selection algorithms, Random Forest, SVM, and deep learning architectures applied to biomarker discovery and sequence classification.</p>
-                </div>
-                <button onclick="setTrainingModule('Module 9: Machine Learning in Biology (6,000 ETB)')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold py-2.5 rounded-lg transition">
-                    Register (6,000 ETB)
-                </button>
-            </div>
-
-            <!-- Module 10 -->
-            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-                <div>
-                    <div class="flex justify-between items-center mb-3">
-                        <span class="text-xs bg-slate-800 text-slate-300 px-2.5 py-1 rounded-full font-medium">5 Weeks</span>
-                        <span class="text-base font-bold text-brand-500">5,000 ETB</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Module 10: Automated Pipeline Engineering (Nextflow & Snakemake)</h3>
-                    <p class="text-slate-400 text-xs mb-4">Building reproducible, automated workflow management pipelines, Docker containerization, and cloud/HPC parallelization.</p>
-                </div>
-                <button onclick="setTrainingModule('Module 10: Pipeline Engineering (5,000 ETB)')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold py-2.5 rounded-lg transition">
-                    Register (5,000 ETB)
-                </button>
-            </div>
-
-        </div>
-
-        <!-- Institutional Quotation Banner -->
-        <div class="mt-12 bg-slate-950 p-8 rounded-xl border border-slate-800 text-center md:flex items-center justify-between">
-            <div class="text-left mb-4 md:mb-0">
-                <h4 class="text-lg font-bold text-white">Custom University or Research Lab Workshops</h4>
-                <p class="text-slate-400 text-sm">Need a tailored training program for your department or institution in Ethiopia?</p>
-            </div>
-            <a href="#contact" onclick="setTrainingModule('Custom Institutional Training Quotation')" class="bg-slate-800 hover:bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold text-sm transition">
-                Request Custom Quotation
-            </a>
-        </div>
-    </section>
-
-    <!-- Peer-Reviewed Publications Section -->
-    <section id="publications" class="py-20 px-6 max-w-7xl mx-auto border-t border-slate-800">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-white">Peer-Reviewed Publications</h2>
-            <p class="text-slate-400 mt-2">Selected research in antigen design, immunoinformatics, and structural biology.</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-brand-500/50 transition flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center justify-between text-xs text-brand-500 font-semibold uppercase mb-3">
-                        <span>PLOS ONE</span>
-                        <span>2026</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2 leading-snug">
-                        In silico design of novel recombinant antigens containing immunologically relevant regions of wild-type and escape mutant variants of HBsAg
-                    </h3>
-                    <p class="text-slate-400 text-sm mb-4">
-                        YA Workneh, <strong>DM Sisay</strong>, A Fekadu, AT Bika, AT Mogus, T Sisay Tessema. <em>PLOS ONE</em> 21 (3), e0344362.
-                    </p>
-                </div>
-                <div class="flex items-center space-x-4 text-xs font-semibold pt-4 border-t border-slate-800">
-                    <a href="https://doi.org/10.1371/journal.pone.0344362" target="_blank" class="text-brand-500 hover:underline flex items-center gap-1">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> View Article (PLOS ONE)
-                    </a>
-                </div>
-            </div>
-
-            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-brand-500/50 transition flex flex-col justify-between">
-                <div>
-                    <div class="flex items-center justify-between text-xs text-brand-500 font-semibold uppercase mb-3">
-                        <span>Bioinformatics & Biology Insights</span>
-                        <span>2026</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2 leading-snug">
-                        In silico Design and Analysis of Engineered Proteins Containing Multi-Epitope and Immunodominant Domains Derived From Rickettsia prowazekii Antigens
-                    </h3>
-                    <p class="text-slate-400 text-sm mb-4">
-                        MA Abebe, <strong>DM Sisay</strong>, A Fekadu, AT Bika, AT Mogus, TS Tessema. <em>Bioinformatics and Biology Insights</em> 20, 11779322261461934.
-                    </p>
-                </div>
-                <div class="flex items-center space-x-4 text-xs font-semibold pt-4 border-t border-slate-800">
-                    <a href="https://journals.sagepub.com/home/bbi" target="_blank" class="text-brand-500 hover:underline flex items-center gap-1">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i> View Journal Page
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Form Section -->
-    <section id="contact" class="py-20 bg-slate-950/50 border-t border-slate-800 px-6">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-bold text-white text-center mb-4">Request Consultation or Register for Training</h2>
-            <p class="text-slate-400 text-center mb-10">Send your project requirements or training registration inquiry directly.</p>
-
-            <form class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you, Desye will receive your inquiry shortly.');">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-sm font-medium text-slate-300 mb-2">Your Name</label>
-                        <input type="text" required class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-500">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-slate-300 mb-2">Email Address</label>
-                        <input type="email" required class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-500">
-                    </div>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-slate-300 mb-2">Category</label>
-                    <select id="form-category" class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-500">
-                        <option>Training Module Registration (ETB)</option>
-                        <option>Vaccine Design & Immunoinformatics Service</option>
-                        <option>NGS & Genomics Data Analysis</option>
-                        <option>Molecular Diagnostics Target & Primer Design</option>
-                        <option>Molecular Docking & Virtual Screening</option>
-                        <option>Molecular Dynamics Simulation (GROMACS)</option>
-                        <option>Custom Pipeline Engineering & ML Workflows</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="block text-sm font-medium text-slate-300 mb-2">Project / Training Details</label>
-                    <textarea id="form-details" rows="5" required class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-500" placeholder="Describe your target protein, biological data, or selected training module..."></textarea>
-                </div>
-                <button type="submit" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-3 rounded-lg transition">Send Inquiry</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-8 text-center text-slate-500 text-sm border-t border-slate-900">
-        <p>&copy; 2026 Desye Melese Sisay. Senior Bioinformatician & Computational Biologist.</p>
-    </footer>
-
-    <!-- SKILL DETAILS MODAL POPUP -->
-    <div id="skill-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-2xl w-full p-6 md:p-8 max-h-[85vh] overflow-y-auto relative shadow-2xl">
-            <button onclick="closeSkillModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
-                <i class="fa-solid fa-xmark"></i>
+        <!-- Navigation Tabs -->
+        <nav class="flex space-x-2 overflow-x-auto pb-1 md:pb-0">
+            <button onclick="switchTab('dashboard')" id="tab-dashboard" class="nav-btn bg-brand-600 text-white text-xs px-4 py-2 rounded-lg font-semibold transition">
+                <i class="fa-solid fa-gauge mr-1.5"></i> Main Dashboard
             </button>
-            <div id="modal-content">
-                <!-- Dynamic Content Injected Here -->
+            <button onclick="switchTab('publications')" id="tab-publications" class="nav-btn bg-slate-800 text-slate-300 hover:text-white text-xs px-4 py-2 rounded-lg font-semibold transition">
+                <i class="fa-solid fa-book-bookmark mr-1.5"></i> Publications
+            </button>
+            <button onclick="switchTab('skills')" id="tab-skills" class="nav-btn bg-slate-800 text-slate-300 hover:text-white text-xs px-4 py-2 rounded-lg font-semibold transition">
+                <i class="fa-solid fa-screwdriver-wrench mr-1.5"></i> Skills & Tools
+            </button>
+            <button onclick="switchTab('services')" id="tab-services" class="nav-btn bg-slate-800 text-slate-300 hover:text-white text-xs px-4 py-2 rounded-lg font-semibold transition">
+                <i class="fa-solid fa-handshake-angle mr-1.5"></i> Services & Consultancy
+            </button>
+            <button onclick="switchTab('courses')" id="tab-courses" class="nav-btn bg-slate-800 text-slate-300 hover:text-white text-xs px-4 py-2 rounded-lg font-semibold transition">
+                <i class="fa-solid fa-graduation-cap mr-1.5"></i> Wollo Univ. Courses
+            </button>
+        </nav>
+    </div>
+</header>
+
+<!-- MAIN CONTENT AREA (DYNAMIC PANELS) -->
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+    <!-- 1. MAIN DASHBOARD OVERVIEW PANEL -->
+    <div id="panel-dashboard" class="tab-panel space-y-12">
+        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl flex flex-col md:flex-row items-center gap-8">
+            <!-- Profile Photo Container -->
+            <div class="relative shrink-0">
+                <div class="w-40 h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden border-2 border-brand-500/40 shadow-xl shadow-brand-500/10">
+                    <img src="Desye _Head shout.jpg" alt="Desye Melese" class="w-full h-full object-cover object-top">
+                </div>
+                <div class="absolute -bottom-2 -right-2 bg-slate-950 text-brand-400 text-[10px] font-bold px-2.5 py-1 rounded-md border border-slate-800 flex items-center gap-1 shadow">
+                    <i class="fa-solid fa-circle-check text-brand-500"></i> Academic & Researcher
+                </div>
             </div>
-            <div class="mt-6 pt-4 border-t border-slate-800 text-right">
-                <button onclick="closeSkillModal()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold px-4 py-2 rounded-lg transition">
-                    Close Window
-                </button>
+
+            <!-- Profile Info & Bio -->
+            <div class="space-y-3 text-center md:text-left">
+                <span class="bg-brand-900/60 text-brand-400 border border-brand-500/30 text-xs px-3 py-1 rounded-full font-semibold">
+                    Bioinformatics & Biotechnology Specialist
+                </span>
+                <h2 class="text-3xl font-bold text-white">Desye Melese</h2>
+                <p class="text-slate-400 text-sm max-w-2xl leading-relaxed">
+                    Lecturer & Researcher at Wollo University and collaborator with CDT-Africa. Specializing in computational biology, structural bioinformatics, immunoinformatics, vaccine candidate design, and molecular dynamics simulations.
+                </p>
+                <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-3">
+                    <button onclick="switchTab('publications')" class="bg-brand-600 hover:bg-brand-500 text-white text-xs px-4 py-2 rounded-lg font-semibold transition">
+                        View Research Papers
+                    </button>
+                    <button onclick="switchTab('courses')" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs px-4 py-2 rounded-lg font-semibold transition">
+                        Wollo Univ. Modules
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Professional Experience Summary Cards -->
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-slate-900 p-8 rounded-xl border border-slate-800 hover:border-brand-500/30 transition">
+                <div class="flex items-center space-x-4 mb-4">
+                    <div class="w-12 h-12 bg-brand-900/50 rounded-lg flex items-center justify-center border border-brand-500/30 text-brand-500 text-xl font-bold">WU</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Wollo University</h3>
+                        <p class="text-xs text-brand-400 font-medium">Lecturer & Researcher | Department of Biotechnology</p>
+                    </div>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4">Curriculum delivery, examination design, computational biology laboratory training, and structural bioinformatics research.</p>
+                <button onclick="switchTab('courses')" class="text-xs text-brand-500 hover:underline font-semibold">View Course Materials &rarr;</button>
+            </div>
+
+            <div class="bg-slate-900 p-8 rounded-xl border border-slate-800 hover:border-brand-500/30 transition">
+                <div class="flex items-center space-x-4 mb-4">
+                    <div class="w-12 h-12 bg-brand-900/50 rounded-lg flex items-center justify-center border border-brand-500/30 text-brand-500 text-xl font-bold">CDT</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white">CDT-Africa</h3>
+                        <p class="text-xs text-brand-400 font-medium">Center for Innovative Drug Development & Therapeutic Trials</p>
+                    </div>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4">Regional capacity building, joint research projects, and translational medicine development in East Africa.</p>
+                <button onclick="switchTab('services')" class="text-xs text-brand-500 hover:underline font-semibold">Explore Training Programs &rarr;</button>
             </div>
         </div>
     </div>
 
-    <!-- JavaScript Functions -->
-    <script>
-        // Registration Helper
-        function setTrainingModule(moduleName) {
-            const textarea = document.getElementById('form-details');
-            if (textarea) {
-                textarea.value = `I wish to register for: ${moduleName}.\n\nPlease provide full syllabus details and local payment options (CBE / Telebirr / Bank Transfer).`;
-            }
-            window.location.hash = '#contact';
-        }
+    <!-- 2. PUBLICATIONS PANEL -->
+    <div id="panel-publications" class="tab-panel hidden space-y-6">
+        <div class="flex justify-between items-center border-b border-slate-800 pb-4">
+            <div>
+                <h2 class="text-2xl font-bold text-white">Peer-Reviewed Publications & Manuscripts</h2>
+                <p class="text-slate-400 text-sm mt-1">Research papers in immunoinformatics, reverse vaccinology, molecular docking, and drug discovery.</p>
+            </div>
+            <button onclick="switchTab('dashboard')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-3 py-1.5 rounded-lg font-medium transition shrink-0">
+                <i class="fa-solid fa-arrow-left mr-1"></i> Back
+            </button>
+        </div>
 
-        // Skill Modal Data
-        const skillData = {
-            ngs: {
-                title: "NGS & Genomics Data Analysis",
-                icon: "fa-microscope",
-                pipelines: ["RNA-Seq Differential Expression (DESeq2, edgeR, Limma-Voom)", "Whole Genome Resequencing & Variant Calling (GATK Best Practices, FreeBayes)", "Metagenomics taxonomic profiling (QIIME2, Kraken2, Bracken, MetaPhlAn)", "Comparative Phylogenomics & microRNA repertoire evolutionary analysis"],
-                tools: ["FastQC", "Trimmomatic", "STAR", "HISAT2", "featureCounts", "Samtools", "BCFtools", "ANNOVAR", "SnpEff", "QIIME2"],
-                formats: ["FASTQ", "BAM/SAM", "VCF/gVCF", "GFF3/GTF", "FASTA"]
-            },
-            vaccine: {
-                title: "Vaccine & Antigen Engineering (Reverse Vaccinology)",
-                icon: "fa-shield-halved",
-                pipelines: ["Immunodominant domain & multi-epitope vaccine construct (MEVC) engineering", "Cytotoxic (CTL), Helper (HTL), and Linear/Conformational B-cell epitope prediction", "Adjuvant integration, flexible linker engineering (EAAAK, GPGPG, KK)", "Physico-chemical, allergenicity, antigenicity & toxicity prediction", "C-ImmSim immune simulation & World Population Coverage calculations"],
-                tools: ["NetMHCpan", "NetMHCIIpan", "IEDB Analysis Resource", "VaxiJen", "Allertop", "ProtParam", "C-ImmSim", "IFNePred"],
-                formats: ["FASTA", "PDB", "Epitope Maps", "Immune Response Metrics"]
-            },
-            diagnostics: {
-                title: "Diagnostics & Biomarker Discovery",
-                icon: "fa-vial",
-                pipelines: ["Diagnostic biomarker identification via feature selection algorithms", "High-specificity primer and probe design for PCR, qPCR, and Multiplex assays", "In silico target validation and off-target cross-reactivity BLAST profiling", "Secondary structure and hairpin formation minimization"],
-                tools: ["Primer3", "NCBI Primer-BLAST", "OligoAnalyzer", "Mfold", "BLAST+", "Clustal Omega"],
-                formats: ["FASTA", "Primer Coordinates", "Melting Curves (Tm)", "Secondary Structure Loops"]
-            },
-            structural: {
-                title: "Structural Biology & Molecular Dynamics",
-                icon: "fa-atom",
-                pipelines: ["High-resolution 3D structure prediction and homology modeling", "Receptor-ligand and protein-protein docking workflows", "100-200+ ns GROMACS Molecular Dynamics production runs", "MM/PBSA binding free energy calculation & trajectory analysis (RMSD, RMSF, Rg, SASA, PCA)"],
-                tools: ["AlphaFold2", "Swiss-Model", "MODELLER", "AutoDock Vina", "HADDOCK", "GROMACS", "g_mmpbsa", "PyMOL", "UCSF Chimera", "PROCHECK/SAVES"],
-                formats: ["PDB", "PDBQT", "TPR/XTC/TRR", "XVG Trajectory Graphs"]
-            },
-            ml: {
-                title: "Programming & Machine Learning in Biology",
-                icon: "fa-brain",
-                pipelines: ["Supervised classification for biological sequence datasets", "Dimensionality reduction (PCA, t-SNE, UMAP)", "Custom BioPython and R Bioconductor script automation", "SLURM high-performance cluster compute job parallelization"],
-                tools: ["Python", "R", "Scikit-learn", "Pandas", "GeoPandas", "Biopython", "Bioconductor", "ggplot2", "Plotly", "Bash/Linux"],
-                formats: ["PY", "R", "CSV/TSV", "JSON", "Jupyter Notebooks"]
-            },
-            workflows: {
-                title: "Workflows, Pipelines & Geospatial Data",
-                icon: "fa-code-branch",
-                pipelines: ["End-to-end automated bioinformatics pipeline engineering", "Docker containerization for 100% reproducible computational research", "Geospatial density mapping and socioeconomic/epidemiological visualization"],
-                tools: ["Nextflow", "Snakemake", "Galaxy", "Docker", "Singularity", "GeoPandas", "Matplotlib", "Git/GitHub"],
-                formats: ["NF", "Snakefile", "Dockerfile", "GeoJSON", "Shapefiles"]
-            }
-        };
+        <div class="space-y-4">
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <span class="text-[10px] bg-brand-900/60 text-brand-400 border border-brand-500/30 px-2.5 py-0.5 rounded-full font-semibold">Vaccine Design</span>
+                <h3 class="text-lg font-bold text-white mt-2">Design of a Multi-Epitope Vaccine Candidate for Pathogenic Targets</h3>
+                <p class="text-slate-400 text-xs mt-2">Integrating immunoinformatics, 200 ns molecular dynamics simulations, and MM/PBSA free energy calculations to evaluate vaccine stability and binding affinity.</p>
+            </div>
 
-        function openSkillModal(key) {
-            const data = skillData[key];
-            if (!data) return;
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <span class="text-[10px] bg-brand-900/60 text-brand-400 border border-brand-500/30 px-2.5 py-0.5 rounded-full font-semibold">Phylogenomics</span>
+                <h3 class="text-lg font-bold text-white mt-2">Comparative Evolutionary and Structural Analysis of MicroRNA Repertoires</h3>
+                <p class="text-slate-400 text-xs mt-2">Comprehensive phylogenomic mapping using R scripts, structural validation, and evolutionary metrics across target sequences.</p>
+            </div>
+        </div>
+    </div>
 
-            const modalContent = document.getElementById('modal-content');
-            modalContent.innerHTML = `
-                <div class="flex items-center space-x-3 mb-4">
-                    <i class="fa-solid ${data.icon} text-2xl text-brand-500"></i>
-                    <h3 class="text-xl font-bold text-white">${data.title}</h3>
+    <!-- 3. SKILLS & TOOLS PANEL -->
+    <div id="panel-skills" class="tab-panel hidden space-y-6">
+        <div class="flex justify-between items-center border-b border-slate-800 pb-4">
+            <div>
+                <h2 class="text-2xl font-bold text-white">Technical Skills & Software Stacks</h2>
+                <p class="text-slate-400 text-sm mt-1">Computational pipelines, programming languages, and molecular modeling tools.</p>
+            </div>
+            <button onclick="switchTab('dashboard')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-3 py-1.5 rounded-lg font-medium transition shrink-0">
+                <i class="fa-solid fa-arrow-left mr-1"></i> Back
+            </button>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <h3 class="text-sm font-bold text-brand-400 uppercase tracking-wider mb-3"><i class="fa-solid fa-atom mr-2"></i>Molecular Modeling</h3>
+                <ul class="text-xs text-slate-300 space-y-2">
+                    <li>GROMACS (Molecular Dynamics)</li>
+                    <li>AutoDock Vina (Virtual Screening)</li>
+                    <li>PyMOL / ChimeraX Visualization</li>
+                    <li>PROCHECK Structural Validation</li>
+                </ul>
+            </div>
+
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <h3 class="text-sm font-bold text-brand-400 uppercase tracking-wider mb-3"><i class="fa-solid fa-code mr-2"></i>Data Analysis & Scripting</h3>
+                <ul class="text-xs text-slate-300 space-y-2">
+                    <li>Python (BioPython, Pandas, GeoPandas)</li>
+                    <li>R (Bioconductor, ggplot2)</li>
+                    <li>Linux Bash & HPC SLURM</li>
+                    <li>Galaxy Project Pipelines</li>
+                </ul>
+            </div>
+
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <h3 class="text-sm font-bold text-brand-400 uppercase tracking-wider mb-3"><i class="fa-solid fa-dna mr-2"></i>Immunoinformatics</h3>
+                <ul class="text-xs text-slate-300 space-y-2">
+                    <li>Multi-Epitope Construct Engineering</li>
+                    <li>IEDB / NetMHCpan Epitope Mapping</li>
+                    <li>AlphaFold2 Structure Prediction</li>
+                    <li>C-ImmSim Immune Simulation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. SERVICES & TRAINING PANEL -->
+    <div id="panel-services" class="tab-panel hidden space-y-6">
+        <div class="flex justify-between items-center border-b border-slate-800 pb-4">
+            <div>
+                <h2 class="text-2xl font-bold text-white">Services & Professional Training Programs</h2>
+                <p class="text-slate-400 text-sm mt-1">Intensive 3-month (minimum 12-week) capacity building workshops starting from 35,000 ETB.</p>
+            </div>
+            <button onclick="switchTab('dashboard')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-3 py-1.5 rounded-lg font-medium transition shrink-0">
+                <i class="fa-solid fa-arrow-left mr-1"></i> Back
+            </button>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-xs text-slate-400">3 Months (12 Wks)</span>
+                    <span class="text-brand-500 font-bold">35,000 ETB</span>
                 </div>
-                
-                <div class="space-y-4 text-sm text-slate-300">
-                    <div>
-                        <h4 class="font-bold text-brand-400 mb-2 uppercase text-xs tracking-wider">Key Workflows & Capabilities:</h4>
-                        <ul class="list-disc list-inside space-y-1 text-slate-400">
-                            ${data.pipelines.map(p => `<li>${p}</li>`).join('')}
-                        </ul>
-                    </div>
+                <h3 class="text-base font-bold text-white mb-2">Computational Genomics</h3>
+                <p class="text-slate-400 text-xs mb-4">Linux, Python, Bioconductor, and RNA-Seq data analysis workflow mastery.</p>
+            </div>
 
-                    <div>
-                        <h4 class="font-bold text-brand-400 mb-2 uppercase text-xs tracking-wider">Primary Tools & Software:</h4>
-                        <div class="flex flex-wrap gap-2">
-                            ${data.tools.map(t => `<span class="bg-slate-800 text-brand-300 text-xs px-2.5 py-1 rounded-md border border-slate-700">${t}</span>`).join('')}
-                        </div>
-                    </div>
-
-                    <div>
-                        <h4 class="font-bold text-brand-400 mb-2 uppercase text-xs tracking-wider">Data Formats Handled:</h4>
-                        <div class="flex flex-wrap gap-2">
-                            ${data.formats.map(f => `<span class="bg-slate-950 text-slate-400 text-xs px-2 py-0.5 rounded border border-slate-800">${f}</span>`).join('')}
-                        </div>
-                    </div>
+            <div class="bg-slate-900 p-6 rounded-xl border border-brand-500/50">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-xs text-slate-400">3 Months (12 Wks)</span>
+                    <span class="text-brand-500 font-bold">45,000 ETB</span>
                 </div>
-            `;
+                <h3 class="text-base font-bold text-white mb-2">Immunoinformatics & Vaccine Design</h3>
+                <p class="text-slate-400 text-xs mb-4">Epitope selection, linkers, adjuvants, docking, and immune simulation.</p>
+            </div>
 
-            document.getElementById('skill-modal').classList.remove('hidden');
-        }
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-xs text-slate-400">3 Months (12 Wks)</span>
+                    <span class="text-brand-500 font-bold">55,000 ETB</span>
+                </div>
+                <h3 class="text-base font-bold text-white mb-2">GROMACS MD Simulations</h3>
+                <p class="text-slate-400 text-xs mb-4">Extended production runs, RMSD/RMSF plots, and MM/PBSA binding energies.</p>
+            </div>
+        </div>
+    </div>
 
-        function closeSkillModal() {
-            document.getElementById('skill-modal').classList.add('hidden');
-        }
-    </script>
-</body>
-</html>
+    <!-- 5. WOLLO UNIVERSITY COURSES PANEL -->
+    <div id="panel-courses" class="tab-panel hidden space-y-6">
+        <div class="flex justify-between items-center border-b border-slate-800 pb-4">
+            <div>
+                <h2 class="text-2xl font-bold text-white">Wollo University Course Hub</h2>
+                <p class="text-slate-400 text-sm mt-1">Select a course to open module documents, lecture files, video links, and past exam sets.</p>
+            </div>
+            <button onclick="switchTab('dashboard')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-3 py-1.5 rounded-lg font-medium transition shrink-0">
+                <i class="fa-solid fa-arrow-left mr-1"></i> Back
+            </button>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <h3 class="text-base font-bold text-white mb-1">Molecular Biology</h3>
+                <p class="text-slate-400 text-xs mb-4">Genome architecture, replication, transcription, and translation.</p>
+                <button onclick="openCourseModal('molbio')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs py-2 rounded font-semibold transition">Access Course Portal</button>
+            </div>
+
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <h3 class="text-base font-bold text-white mb-1">Fundamental Biotechnology</h3>
+                <p class="text-slate-400 text-xs mb-4">Bioprocess engineering, fermentation, and agricultural apps.</p>
+                <button onclick="openCourseModal('fundbiotech')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs py-2 rounded font-semibold transition">Access Course Portal</button>
+            </div>
+
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <h3 class="text-base font-bold text-white mb-1">Bioinformatics</h3>
+                <p class="text-slate-400 text-xs mb-4">Sequence alignments, BLAST, and phylogenetic trees.</p>
+                <button onclick="openCourseModal('bioinfo')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs py-2 rounded font-semibold transition">Access Course Portal</button>
+            </div>
+
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <h3 class="text-base font-bold text-white mb-1">Omics Science</h3>
+                <p class="text-slate-400 text-xs mb-4">Genomics, RNA-Seq transcriptomics, and proteomics.</p>
+                <button onclick="openCourseModal('omics')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs py-2 rounded font-semibold transition">Access Course Portal</button>
+            </div>
+
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <h3 class="text-base font-bold text-white mb-1">NanoBiotechnology</h3>
+                <p class="text-slate-400 text-xs mb-4">Bionanomaterials, targeted delivery, and nanobiosensors.</p>
+                <button onclick="openCourseModal('nanobiotech')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs py-2 rounded font-semibold transition">Access Course Portal</button>
+            </div>
+
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <h3 class="text-base font-bold text-white mb-1">Forensic Biotechnology</h3>
+                <p class="text-slate-400 text-xs mb-4">DNA profiling, STR typing, and legal chain of custody.</p>
+                <button onclick="openCourseModal('forensics')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs py-2 rounded font-semibold transition">Access Course Portal</button>
+            </div>
+
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <h3 class="text-base font-bold text-white mb-1">Molecular Biophysics</h3>
+                <p class="text-slate-400 text-xs mb-4">Biomolecular thermodynamics, spectroscopy, and protein folding.</p>
+                <button onclick="openCourseModal('biophysics')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs py-2 rounded font-semibold transition">Access Course Portal</button>
+            </div>
+        </div>
+    </div>
+
+</main>
