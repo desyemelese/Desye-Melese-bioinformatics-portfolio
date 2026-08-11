@@ -1,568 +1,250 @@
-<!DOCTYPE html>
-<html lang="en" class="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desye Melese - Academic & Research Portal</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            400: '#38bdf8',
-                            500: '#0284c7',
-                            600: '#0369a1',
-                            900: '#0c4a6e',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body class="bg-slate-950 text-slate-100 min-h-screen font-sans">
-
-    <!-- Header & Dynamic Navigation Tabs -->
-    <header class="bg-slate-900 border-b border-slate-800 sticky top-0 z-40">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center gap-4">
-            <div class="flex items-center space-x-3">
-                <span class="w-3 h-3 bg-brand-500 rounded-full animate-pulse"></span>
-                <h1 class="text-lg font-bold text-white tracking-wide">Academic & Research Portal</h1>
-            </div>
-
-            <!-- Tab Buttons -->
-            <nav class="flex space-x-2 overflow-x-auto pb-1 md:pb-0">
-                <button onclick="switchTab('dashboard')" id="tab-dashboard" class="nav-btn bg-brand-600 text-white text-xs px-4 py-2 rounded-lg font-semibold transition">
-                    <i class="fa-solid fa-gauge mr-1.5"></i> Dashboard
-                </button>
-                <button onclick="switchTab('publications')" id="tab-publications" class="nav-btn bg-slate-800 text-slate-300 hover:text-white text-xs px-4 py-2 rounded-lg font-semibold transition">
-                    <i class="fa-solid fa-book-bookmark mr-1.5"></i> Publications
-                </button>
-                <button onclick="switchTab('skills')" id="tab-skills" class="nav-btn bg-slate-800 text-slate-300 hover:text-white text-xs px-4 py-2 rounded-lg font-semibold transition">
-                    <i class="fa-solid fa-screwdriver-wrench mr-1.5"></i> Skills & Tools
-                </button>
-                <button onclick="switchTab('services')" id="tab-services" class="nav-btn bg-slate-800 text-slate-300 hover:text-white text-xs px-4 py-2 rounded-lg font-semibold transition">
-                    <i class="fa-solid fa-handshake-angle mr-1.5"></i> Services
-                </button>
-                <button onclick="switchTab('courses')" id="tab-courses" class="nav-btn bg-slate-800 text-slate-300 hover:text-white text-xs px-4 py-2 rounded-lg font-semibold transition">
-                    <i class="fa-solid fa-graduation-cap mr-1.5"></i> Wollo Univ. Courses
-                </button>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Main Dynamic Content Container -->
-    <main class="max-w-7xl mx-auto px-6 py-10">
-
-        <!-- PANEL 1: MAIN DASHBOARD -->
-        <div id="panel-dashboard" class="tab-panel space-y-12">
-            
-            <!-- Hero Header with Image -->
-            <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl flex flex-col md:flex-row items-center gap-8">
-                <!-- Headshot Container -->
-                <div class="relative shrink-0">
-                    <div class="w-44 h-44 md:w-52 md:h-52 rounded-2xl overflow-hidden border-2 border-brand-500/40 shadow-xl shadow-brand-500/10">
-                        <img src="Desye _Head shout.jpg" alt="Desye Melese" class="w-full h-full object-cover object-top" onerror="this.src='profile.jpg'">
-                    </div>
-                    <div class="absolute -bottom-2 -right-2 bg-slate-950 text-brand-400 text-[10px] font-bold px-2.5 py-1 rounded-md border border-slate-800 flex items-center gap-1 shadow">
-                        <i class="fa-solid fa-circle-check text-brand-500"></i> Lecturer & Researcher
-                    </div>
-                </div>
-
-                <!-- Academic Overview -->
-                <div class="space-y-3 text-center md:text-left">
-                    <span class="bg-brand-900/60 text-brand-400 border border-brand-500/30 text-xs px-3 py-1 rounded-full font-semibold">
-                        Bioinformatics & Biotechnology Specialist
-                    </span>
-                    <h2 class="text-3xl font-bold text-white">Desye Melese</h2>
-                    <p class="text-slate-400 text-sm max-w-2xl leading-relaxed">
-                        Bioinformatics researcher and higher education academic in Ethiopia. Specializing in structural bioinformatics, immunoinformatics, vaccine candidate design, molecular docking, and 200 ns molecular dynamics simulations.
-                    </p>
-                    <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-3">
-                        <button onclick="switchTab('publications')" class="bg-brand-600 hover:bg-brand-500 text-white text-xs px-4 py-2 rounded-lg font-semibold transition">
-                            Explore Publications
-                        </button>
-                        <button onclick="switchTab('courses')" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs px-4 py-2 rounded-lg font-semibold transition">
-                            Access Academic Courses
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Professional Experience Section -->
-            <div class="space-y-6">
-                <div class="border-b border-slate-800 pb-3">
-                    <h3 class="text-xl font-bold text-white">Professional Experience</h3>
-                    <p class="text-slate-400 text-xs mt-1">Institutional academic leadership and collaborative research track.</p>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Institution 1: Wollo University -->
-                    <div class="bg-slate-900 p-8 rounded-xl border border-slate-800 hover:border-brand-500/40 transition">
-                        <div class="flex items-center space-x-4 mb-4">
-                            <div class="w-12 h-12 bg-brand-900/50 rounded-lg flex items-center justify-center border border-brand-500/30 text-brand-500 text-xl font-bold">
-                                WU
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold text-white">Wollo University</h4>
-                                <p class="text-xs text-brand-400 font-medium">Department of Biotechnology</p>
-                            </div>
-                        </div>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                            Delivering undergraduate and postgraduate coursework, directing student research projects, managing computational biology laboratories, and leading structural bioinformatics studies.
-                        </p>
-                        <div class="space-y-2 mb-6">
-                            <div class="flex items-center text-xs text-slate-300"><i class="fa-solid fa-chalkboard-user text-brand-500 mr-2"></i> <strong>Lecturer:</strong> Curriculum delivery, exam setting & practical lab execution.</div>
-                            <div class="flex items-center text-xs text-slate-300"><i class="fa-solid fa-flask-vial text-brand-500 mr-2"></i> <strong>Researcher:</strong> Immunoinformatics, molecular docking & phylogenomics.</div>
-                        </div>
-                        <button onclick="switchTab('courses')" class="text-xs text-brand-500 hover:underline font-semibold flex items-center gap-1">
-                            Go to Wollo Univ. Course Hub <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                    </div>
-
-                    <!-- Institution 2: CDT Africa -->
-                    <div class="bg-slate-900 p-8 rounded-xl border border-slate-800 hover:border-brand-500/40 transition">
-                        <div class="flex items-center space-x-4 mb-4">
-                            <div class="w-12 h-12 bg-brand-900/50 rounded-lg flex items-center justify-center border border-brand-500/30 text-brand-500 text-xl font-bold">
-                                CDT
-                            </div>
-                            <div>
-                                <h4 class="text-xl font-bold text-white">CDT-Africa</h4>
-                                <p class="text-xs text-brand-400 font-medium">Center for Innovative Drug Development & Therapeutic Trials</p>
-                            </div>
-                        </div>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                            Collaborating on regional capacity building, specialized bioinformatics workshops, joint translational research projects, and drug target identification across East Africa.
-                        </p>
-                        <div class="space-y-2 mb-6">
-                            <div class="flex items-center text-xs text-slate-300"><i class="fa-solid fa-dna text-brand-500 mr-2"></i> Computational Genomics & Capacity Building</div>
-                            <div class="flex items-center text-xs text-slate-300"><i class="fa-solid fa-vial-circle-check text-brand-500 mr-2"></i> Phytotherapy & Computational Drug Discovery</div>
-                        </div>
-                        <button onclick="switchTab('services')" class="text-xs text-brand-500 hover:underline font-semibold flex items-center gap-1">
-                            Explore CDT Capacity Workshops <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
+<!-- Dashboard Navigation Bar -->
+<header class="bg-slate-900 border-b border-slate-800 sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center gap-4">
+        <div class="flex items-center space-x-3">
+            <span class="w-3 h-3 bg-brand-500 rounded-full animate-pulse"></span>
+            <h1 class="text-lg font-bold text-white tracking-wide">Academic & Research Portal</h1>
         </div>
 
-        <!-- PANEL 2: PUBLICATIONS -->
-        <div id="panel-publications" class="tab-panel hidden space-y-6">
-            <div class="flex justify-between items-center border-b border-slate-800 pb-4">
-                <div>
-                    <h2 class="text-2xl font-bold text-white">Publications & Research Manuscripts</h2>
-                    <p class="text-slate-400 text-sm mt-1">Peer-reviewed papers and ongoing computational modeling projects.</p>
-                </div>
-                <button onclick="switchTab('dashboard')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-3 py-1.5 rounded-lg font-medium transition">
-                    <i class="fa-solid fa-arrow-left mr-1"></i> Dashboard
-                </button>
-            </div>
-
-            <div class="space-y-4">
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
-                    <div class="flex justify-between items-center mb-2">
-                        <span class="text-[10px] bg-brand-900/60 text-brand-400 border border-brand-500/30 px-2.5 py-0.5 rounded-full font-semibold">Vaccine Engineering</span>
-                        <span class="text-xs text-slate-500">Research Paper</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-white">Design and Evaluation of a Multi-Epitope Vaccine Candidate (MEVC) for Pathogenic Targets</h3>
-                    <p class="text-slate-400 text-xs mt-2 leading-relaxed">
-                        Integrating immunoinformatics, 200 ns GROMACS molecular dynamics simulations, C-ImmSim immune modeling, and MM/PBSA free energy binding calculations to construct high-affinity multi-epitope vaccine candidates.
-                    </p>
-                </div>
-
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
-                    <div class="flex justify-between items-center mb-2">
-                        <span class="text-[10px] bg-brand-900/60 text-brand-400 border border-brand-500/30 px-2.5 py-0.5 rounded-full font-semibold">Phylogenomics</span>
-                        <span class="text-xs text-slate-500">Comparative Analysis</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-white">Comparative Phylogenomic Analysis of MicroRNA Repertoires</h3>
-                    <p class="text-slate-400 text-xs mt-2 leading-relaxed">
-                        Processing sequence data from miRBase using R scripts to generate evolutionary metrics, structural alignments, phylogenetic trees, and target binding profiles.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- PANEL 3: SKILLS & TOOLS -->
-        <div id="panel-skills" class="tab-panel hidden space-y-6">
-            <div class="flex justify-between items-center border-b border-slate-800 pb-4">
-                <div>
-                    <h2 class="text-2xl font-bold text-white">Technical Skills & Software Stacks</h2>
-                    <p class="text-slate-400 text-sm mt-1">Computational workflows, molecular dynamic tools, and programming stack.</p>
-                </div>
-                <button onclick="switchTab('dashboard')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-3 py-1.5 rounded-lg font-medium transition">
-                    <i class="fa-solid fa-arrow-left mr-1"></i> Dashboard
-                </button>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
-                    <h3 class="text-sm font-bold text-brand-400 uppercase tracking-wider mb-3"><i class="fa-solid fa-atom mr-2"></i>Structural Biology</h3>
-                    <ul class="text-xs text-slate-300 space-y-2">
-                        <li><i class="fa-solid fa-check text-brand-500 mr-2"></i>GROMACS (200ns MD Simulations)</li>
-                        <li><i class="fa-solid fa-check text-brand-500 mr-2"></i>AutoDock Vina (Virtual Screening)</li>
-                        <li><i class="fa-solid fa-check text-brand-500 mr-2"></i>PyMOL / ChimeraX Rendering</li>
-                        <li><i class="fa-solid fa-check text-brand-500 mr-2"></i>PROCHECK / Ramachandran Validation</li>
-                    </ul>
-                </div>
-
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
-                    <h3 class="text-sm font-bold text-brand-400 uppercase tracking-wider mb-3"><i class="fa-solid fa-code mr-2"></i>Data & Scripting</h3>
-                    <ul class="text-xs text-slate-300 space-y-2">
-                        <li><i class="fa-solid fa-check text-brand-500 mr-2"></i>Python (Pandas, GeoPandas, BioPython)</li>
-                        <li><i class="fa-solid fa-check text-brand-500 mr-2"></i>R (Bioconductor, ggplot2)</li>
-                        <li><i class="fa-solid fa-check text-brand-500 mr-2"></i>Linux Shell Scripting & HPC SLURM</li>
-                        <li><i class="fa-solid fa-check text-brand-500 mr-2"></i>Galaxy Project Pipelines</li>
-                    </ul>
-                </div>
-
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
-                    <h3 class="text-sm font-bold text-brand-400 uppercase tracking-wider mb-3"><i class="fa-solid fa-dna mr-2"></i>Immunoinformatics</h3>
-                    <ul class="text-xs text-slate-300 space-y-2">
-                        <li><i class="fa-solid fa-check text-brand-500 mr-2"></i>Multi-Epitope Construct Engineering</li>
-                        <li><i class="fa-solid fa-check text-brand-500 mr-2"></i>IEDB / NetMHCpan Epitope Screening</li>
-                        <li><i class="fa-solid fa-check text-brand-500 mr-2"></i>AlphaFold2 Structure Prediction</li>
-                        <li><i class="fa-solid fa-check text-brand-500 mr-2"></i>C-ImmSim Dynamic Immune Simulation</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- PANEL 4: SERVICES & TRAINING -->
-        <div id="panel-services" class="tab-panel hidden space-y-6">
-            <div class="flex justify-between items-center border-b border-slate-800 pb-4">
-                <div>
-                    <h2 class="text-2xl font-bold text-white">Professional Training & Consultancy</h2>
-                    <p class="text-slate-400 text-sm mt-1">Intensive 3-month (minimum 12 weeks) capacity building programs starting from 35,000 ETB.</p>
-                </div>
-                <button onclick="switchTab('dashboard')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-3 py-1.5 rounded-lg font-medium transition">
-                    <i class="fa-solid fa-arrow-left mr-1"></i> Dashboard
-                </button>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6">
-                <!-- Program 1 -->
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span class="text-[10px] bg-slate-800 text-slate-300 px-2.5 py-1 rounded-full font-medium">3 Months (12 Wks)</span>
-                            <span class="text-lg font-extrabold text-brand-500">35,000 ETB</span>
-                        </div>
-                        <h3 class="text-base font-bold text-white mb-2">Computational Genomics & Data Science</h3>
-                        <p class="text-slate-400 text-xs mb-4 leading-relaxed">
-                            Linux CLI, Python/BioPython pipelines, R Bioconductor, and NGS RNA-Seq differential expression analysis workflows.
-                        </p>
-                    </div>
-                    <button class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold py-2.5 rounded-lg transition">Enroll Program (35,000 ETB)</button>
-                </div>
-
-                <!-- Program 2 -->
-                <div class="bg-slate-900 p-6 rounded-xl border border-brand-500/50 flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span class="text-[10px] bg-brand-900/60 text-brand-400 px-2.5 py-1 rounded-full font-medium">3 Months (12 Wks)</span>
-                            <span class="text-lg font-extrabold text-brand-500">45,000 ETB</span>
-                        </div>
-                        <h3 class="text-base font-bold text-white mb-2">Immunoinformatics & Vaccine Design</h3>
-                        <p class="text-slate-400 text-xs mb-4 leading-relaxed">
-                            HTL/CTL epitope prediction, multi-epitope construct modeling, AlphaFold2 validation, docking, and C-ImmSim immune modeling.
-                        </p>
-                    </div>
-                    <button class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold py-2.5 rounded-lg transition">Enroll Program (45,000 ETB)</button>
-                </div>
-
-                <!-- Program 3 -->
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-center mb-3">
-                            <span class="text-[10px] bg-slate-800 text-slate-300 px-2.5 py-1 rounded-full font-medium">3 Months (12 Wks)</span>
-                            <span class="text-lg font-extrabold text-brand-500">55,000 ETB</span>
-                        </div>
-                        <h3 class="text-base font-bold text-white mb-2">GROMACS Molecular Dynamics</h3>
-                        <p class="text-slate-400 text-xs mb-4 leading-relaxed">
-                            Structure preparation, AutoDock Vina virtual screening, 200 ns GROMACS MD simulation production, RMSD/RMSF, and MM/PBSA calculations.
-                        </p>
-                    </div>
-                    <button class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold py-2.5 rounded-lg transition">Enroll Program (55,000 ETB)</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- PANEL 5: WOLLO UNIVERSITY COURSES HUB -->
-        <div id="panel-courses" class="tab-panel hidden space-y-6">
-            <div class="flex justify-between items-center border-b border-slate-800 pb-4">
-                <div>
-                    <h2 class="text-2xl font-bold text-white">Wollo University — Course Portal</h2>
-                    <p class="text-slate-400 text-sm mt-1">Select any course to view modules, lecture materials, video links, and past exam files.</p>
-                </div>
-                <button onclick="switchTab('dashboard')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-3 py-1.5 rounded-lg font-medium transition">
-                    <i class="fa-solid fa-arrow-left mr-1"></i> Dashboard
-                </button>
-            </div>
-
-            <!-- Grid of 7 Specific Courses -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <!-- Course 1 -->
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] bg-slate-800 text-brand-400 px-2.5 py-1 rounded-full font-semibold">Core Course</span>
-                        <h3 class="text-lg font-bold text-white mt-3 mb-2">Molecular Biology</h3>
-                        <p class="text-slate-400 text-xs mb-4">Genome architecture, replication mechanics, transcription, translation, and recombinant DNA technology.</p>
-                    </div>
-                    <button onclick="openCourseModal('molbio')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold py-2.5 rounded-lg transition">
-                        <i class="fa-solid fa-folder-open mr-1"></i> Access Course Files
-                    </button>
-                </div>
-
-                <!-- Course 2 -->
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] bg-slate-800 text-brand-400 px-2.5 py-1 rounded-full font-semibold">Foundational</span>
-                        <h3 class="text-lg font-bold text-white mt-3 mb-2">Fundamental Biotechnology</h3>
-                        <p class="text-slate-400 text-xs mb-4">Bioprocess engineering principles, microbial fermentation, and industrial applications.</p>
-                    </div>
-                    <button onclick="openCourseModal('fundbiotech')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold py-2.5 rounded-lg transition">
-                        <i class="fa-solid fa-folder-open mr-1"></i> Access Course Files
-                    </button>
-                </div>
-
-                <!-- Course 3 -->
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] bg-slate-800 text-brand-400 px-2.5 py-1 rounded-full font-semibold">Computational</span>
-                        <h3 class="text-lg font-bold text-white mt-3 mb-2">Bioinformatics</h3>
-                        <p class="text-slate-400 text-xs mb-4">Pairwise/multiple sequence alignment, BLAST, phylogenetic trees, and database mining.</p>
-                    </div>
-                    <button onclick="openCourseModal('bioinfo')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold py-2.5 rounded-lg transition">
-                        <i class="fa-solid fa-folder-open mr-1"></i> Access Course Files
-                    </button>
-                </div>
-
-                <!-- Course 4 -->
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] bg-slate-800 text-brand-400 px-2.5 py-1 rounded-full font-semibold">Advanced</span>
-                        <h3 class="text-lg font-bold text-white mt-3 mb-2">Omics Science</h3>
-                        <p class="text-slate-400 text-xs mb-4">Genomics, RNA-Seq transcriptomics, proteomics, and systems biology data integration.</p>
-                    </div>
-                    <button onclick="openCourseModal('omics')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold py-2.5 rounded-lg transition">
-                        <i class="fa-solid fa-folder-open mr-1"></i> Access Course Files
-                    </button>
-                </div>
-
-                <!-- Course 5 -->
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] bg-slate-800 text-brand-400 px-2.5 py-1 rounded-full font-semibold">Interdisciplinary</span>
-                        <h3 class="text-lg font-bold text-white mt-3 mb-2">NanoBiotechnology</h3>
-                        <p class="text-slate-400 text-xs mb-4">Nanomaterial synthesis, nanomedicine, targeted drug delivery, and biosensor technology.</p>
-                    </div>
-                    <button onclick="openCourseModal('nanobiotech')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold py-2.5 rounded-lg transition">
-                        <i class="fa-solid fa-folder-open mr-1"></i> Access Course Files
-                    </button>
-                </div>
-
-                <!-- Course 6 -->
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] bg-slate-800 text-brand-400 px-2.5 py-1 rounded-full font-semibold">Specialized</span>
-                        <h3 class="text-lg font-bold text-white mt-3 mb-2">Forensic Biotechnology</h3>
-                        <p class="text-slate-400 text-xs mb-4">DNA profiling, STR amplification, mitochondrial DNA typing, and legal chain of custody.</p>
-                    </div>
-                    <button onclick="openCourseModal('forensics')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold py-2.5 rounded-lg transition">
-                        <i class="fa-solid fa-folder-open mr-1"></i> Access Course Files
-                    </button>
-                </div>
-
-                <!-- Course 7 -->
-                <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 flex flex-col justify-between">
-                    <div>
-                        <span class="text-[10px] bg-slate-800 text-brand-400 px-2.5 py-1 rounded-full font-semibold">Biophysics</span>
-                        <h3 class="text-lg font-bold text-white mt-3 mb-2">Molecular Biophysics</h3>
-                        <p class="text-slate-400 text-xs mb-4">Thermodynamics of biomolecules, spectroscopy (CD/NMR), and protein folding dynamics.</p>
-                    </div>
-                    <button onclick="openCourseModal('biophysics')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold py-2.5 rounded-lg transition">
-                        <i class="fa-solid fa-folder-open mr-1"></i> Access Course Files
-                    </button>
-                </div>
-
-            </div>
-        </div>
-
-    </main>
-
-    <!-- COURSE DETAIL POPUP MODAL -->
-    <div id="course-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-2xl w-full p-6 md:p-8 max-h-[85vh] overflow-y-auto relative shadow-2xl">
-            <button onclick="closeCourseModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
-                <i class="fa-solid fa-xmark"></i>
+        <!-- Navigation Tabs -->
+        <nav class="flex space-x-2 overflow-x-auto pb-1 md:pb-0">
+            <button onclick="switchTab('dashboard')" id="tab-dashboard" class="nav-btn bg-brand-600 text-white text-xs px-4 py-2 rounded-lg font-semibold transition">
+                <i class="fa-solid fa-gauge mr-1.5"></i> Main Dashboard
             </button>
-            
-            <div id="course-modal-content">
-                <!-- Injected via JavaScript -->
+            <button onclick="switchTab('publications')" id="tab-publications" class="nav-btn bg-slate-800 text-slate-300 hover:text-white text-xs px-4 py-2 rounded-lg font-semibold transition">
+                <i class="fa-solid fa-book-bookmark mr-1.5"></i> Publications
+            </button>
+            <button onclick="switchTab('skills')" id="tab-skills" class="nav-btn bg-slate-800 text-slate-300 hover:text-white text-xs px-4 py-2 rounded-lg font-semibold transition">
+                <i class="fa-solid fa-screwdriver-wrench mr-1.5"></i> Skills & Tools
+            </button>
+            <button onclick="switchTab('services')" id="tab-services" class="nav-btn bg-slate-800 text-slate-300 hover:text-white text-xs px-4 py-2 rounded-lg font-semibold transition">
+                <i class="fa-solid fa-handshake-angle mr-1.5"></i> Services & Consultancy
+            </button>
+            <button onclick="switchTab('courses')" id="tab-courses" class="nav-btn bg-slate-800 text-slate-300 hover:text-white text-xs px-4 py-2 rounded-lg font-semibold transition">
+                <i class="fa-solid fa-graduation-cap mr-1.5"></i> Wollo Univ. Courses
+            </button>
+        </nav>
+    </div>
+</header>
+
+<!-- MAIN CONTENT AREA (DYNAMIC PANELS) -->
+<main class="max-w-7xl mx-auto px-6 py-10">
+
+    <!-- 1. MAIN DASHBOARD OVERVIEW PANEL -->
+    <div id="panel-dashboard" class="tab-panel space-y-12">
+        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl">
+            <h2 class="text-2xl font-bold text-white mb-2">Welcome to the Research & Academic Hub</h2>
+            <p class="text-slate-400 text-sm max-w-3xl leading-relaxed">
+                Select a tab from the top navigation bar to access detailed research publication archives, computational biology software stacks, specialized consulting services, or university course modules.
+            </p>
+        </div>
+
+        <!-- Professional Experience Summary Cards -->
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-slate-900 p-8 rounded-xl border border-slate-800">
+                <div class="flex items-center space-x-4 mb-4">
+                    <div class="w-12 h-12 bg-brand-900/50 rounded-lg flex items-center justify-center border border-brand-500/30 text-brand-500 text-xl font-bold">WU</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Wollo University</h3>
+                        <p class="text-xs text-brand-400 font-medium">Lecturer & Researcher | Department of Biotechnology</p>
+                    </div>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4">Curriculum delivery, examination design, computational biology laboratory training, and structural bioinformatics research.</p>
+                <button onclick="switchTab('courses')" class="text-xs text-brand-500 hover:underline font-semibold">View Course Materials &rarr;</button>
             </div>
 
-            <div class="mt-6 pt-4 border-t border-slate-800 text-right">
-                <button onclick="closeCourseModal()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold px-4 py-2 rounded-lg transition">
-                    Close Portal
-                </button>
+            <div class="bg-slate-900 p-8 rounded-xl border border-slate-800">
+                <div class="flex items-center space-x-4 mb-4">
+                    <div class="w-12 h-12 bg-brand-900/50 rounded-lg flex items-center justify-center border border-brand-500/30 text-brand-500 text-xl font-bold">CDT</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white">CDT-Africa</h3>
+                        <p class="text-xs text-brand-400 font-medium">Center for Innovative Drug Development & Therapeutic Trials</p>
+                    </div>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed mb-4">Regional capacity building, joint research projects, and translational medicine development in East Africa.</p>
+                <button onclick="switchTab('services')" class="text-xs text-brand-500 hover:underline font-semibold">Explore Training Programs &rarr;</button>
             </div>
         </div>
     </div>
 
-    <!-- JAVASCRIPT LOGIC -->
-    <script>
-        // Tab Navigation Logic
-        function switchTab(tabId) {
-            // Hide all tab panels
-            document.querySelectorAll('.tab-panel').forEach(panel => {
-                panel.classList.add('hidden');
-            });
+    <!-- 2. PUBLICATIONS PANEL -->
+    <div id="panel-publications" class="tab-panel hidden space-y-6">
+        <div class="border-b border-slate-800 pb-4">
+            <h2 class="text-2xl font-bold text-white">Peer-Reviewed Publications & Manuscripts</h2>
+            <p class="text-slate-400 text-sm mt-1">Research papers in immunoinformatics, reverse vaccinology, molecular docking, and drug discovery.</p>
+        </div>
 
-            // Reset navigation button styles
-            document.querySelectorAll('.nav-btn').forEach(btn => {
-                btn.classList.remove('bg-brand-600', 'text-white');
-                btn.classList.add('bg-slate-800', 'text-slate-300');
-            });
+        <div class="space-y-4">
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <span class="text-[10px] bg-brand-900/60 text-brand-400 border border-brand-500/30 px-2.5 py-0.5 rounded-full font-semibold">Vaccine Design</span>
+                <h3 class="text-lg font-bold text-white mt-2">Design of a Multi-Epitope Vaccine Candidate for Pathogenic Targets</h3>
+                <p class="text-slate-400 text-xs mt-2">Integrating immunoinformatics, 200 ns molecular dynamics simulations, and MM/PBSA free energy calculations to evaluate vaccine stability and binding affinity.</p>
+            </div>
 
-            // Reveal active panel
-            const activePanel = document.getElementById('panel-' + tabId);
-            if (activePanel) {
-                activePanel.classList.remove('hidden');
-            }
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <span class="text-[10px] bg-brand-900/60 text-brand-400 border border-brand-500/30 px-2.5 py-0.5 rounded-full font-semibold">Phylogenomics</span>
+                <h3 class="text-lg font-bold text-white mt-2">Comparative Evolutionary and Structural Analysis of MicroRNA Repertoires</h3>
+                <p class="text-slate-400 text-xs mt-2">Comprehensive phylogenomic mapping using R scripts, structural validation, and evolutionary metrics across target sequences.</p>
+            </div>
+        </div>
+    </div>
 
-            // Highlight active button
-            const activeTab = document.getElementById('tab-' + tabId);
-            if (activeTab) {
-                activeTab.classList.remove('bg-slate-800', 'text-slate-300');
-                activeTab.classList.add('bg-brand-600', 'text-white');
-            }
+    <!-- 3. SKILLS & TOOLS PANEL -->
+    <div id="panel-skills" class="tab-panel hidden space-y-6">
+        <div class="border-b border-slate-800 pb-4">
+            <h2 class="text-2xl font-bold text-white">Technical Skills & Software Stacks</h2>
+            <p class="text-slate-400 text-sm mt-1">Computational pipelines, programming languages, and molecular modeling tools.</p>
+        </div>
 
-            // Scroll to top
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <h3 class="text-sm font-bold text-brand-400 uppercase tracking-wider mb-3"><i class="fa-solid fa-atom mr-2"></i>Molecular Modeling</h3>
+                <ul class="text-xs text-slate-300 space-y-2">
+                    <li>GROMACS (Molecular Dynamics)</li>
+                    <li>AutoDock Vina (Virtual Screening)</li>
+                    <li>PyMOL / ChimeraX Visualization</li>
+                    <li>PROCHECK Structural Validation</li>
+                </ul>
+            </div>
 
-        // Detailed Course Modal Data
-        const courseData = {
-            molbio: {
-                title: "Molecular Biology",
-                module: "Wollo University - Module Code: MbI-401",
-                lectures: ["Lecture 1: Genome Architecture & DNA Replication.pdf", "Lecture 2: Transcription & RNA Processing.pdf", "Lecture 3: Translation & Gene Regulation.pdf"],
-                videos: ["Video: Recombinant DNA Technology & Cloning Mechanics", "Video: Polymerase Chain Reaction (PCR) Practical Demonstration"],
-                exams: ["Mid-Semester Exam & Answer Key.pdf", "Final Theory Examination Paper.pdf"]
-            },
-            fundbiotech: {
-                title: "Fundamental Biotechnology",
-                module: "Wollo University - Module Code: FBt-202",
-                lectures: ["Lecture 1: Microbial Biotechnology Overview.pdf", "Lecture 2: Fermentation Kinetics & Bioreactor Design.pdf", "Lecture 3: Agricultural Biotechnology Applications.pdf"],
-                videos: ["Video: Industrial Bioreactor Operation", "Video: Upstream and Downstream Bioprocess Operations"],
-                exams: ["Continuous Assessment Test.pdf", "Semester Final Examination.pdf"]
-            },
-            bioinfo: {
-                title: "Bioinformatics",
-                module: "Wollo University - Module Code: Binf-301",
-                lectures: ["Lecture 1: Biological Databases & File Formats.pdf", "Lecture 2: Sequence Alignments & Substitution Matrices.pdf", "Lecture 3: BLAST Algorithms & Phylogenetics.pdf"],
-                videos: ["Video Practical: NCBI Entrez & Command-Line BLAST", "Video Practical: MEGA Phylogenetic Tree Construction"],
-                exams: ["Bioinformatics Computer Lab Practical Exam.pdf", "Final Theory Examination.pdf"]
-            },
-            omics: {
-                title: "Omics Science",
-                module: "Wollo University - Module Code: Oms-402",
-                lectures: ["Lecture 1: NGS & High-Throughput Sequencing.pdf", "Lecture 2: RNA-Seq Differential Expression Analysis.pdf", "Lecture 3: Proteomics & Mass Spectrometry Data.pdf"],
-                videos: ["Video Walkthrough: RNA-Seq Data Processing in R/Bioconductor", "Video Walkthrough: Galaxy Project Workflow Setup"],
-                exams: ["Transcriptomics Project Evaluation.pdf", "Final Omics Exam Paper.pdf"]
-            },
-            nanobiotech: {
-                title: "NanoBiotechnology",
-                module: "Wollo University - Module Code: Nbt-403",
-                lectures: ["Lecture 1: Bionanomaterial Synthesis & Characterization.pdf", "Lecture 2: Nanoparticles in Targeted Drug Delivery.pdf", "Lecture 3: Biosensors & Diagnostic Devices.pdf"],
-                videos: ["Video Demonstration: Functionalizing Nanoparticle Surfaces", "Video Demonstration: Atomic Force Microscopy in Biology"],
-                exams: ["Mid-Term Assessment.pdf", "Final Nanobiotech Case Study Exam.pdf"]
-            },
-            forensics: {
-                title: "Forensic Biotechnology",
-                module: "Wollo University - Module Code: Fbt-404",
-                lectures: ["Lecture 1: DNA Fingerprinting & STR Analysis.pdf", "Lecture 2: Mitochondrial DNA & Y-STR Markers.pdf", "Lecture 3: Forensic Serology & Chain of Custody.pdf"],
-                videos: ["Video Practical: Capillary Electrophoresis & STR Allele Calling", "Video Practical: Calculating Paternity Index & Likelihood Ratios"],
-                exams: ["Forensic Case Analysis Test.pdf", "Final Examination.pdf"]
-            },
-            biophysics: {
-                title: "Molecular Biophysics",
-                module: "Wollo University - Module Code: Mbp-405",
-                lectures: ["Lecture 1: Protein Thermodynamics & Conformational Entropy.pdf", "Lecture 2: Spectroscopy Methods (CD, NMR, Fluorescence).pdf", "Lecture 3: Forces Governing Biomolecular Folding.pdf"],
-                videos: ["Video Lecture: Protein Folding Landscapes & Molten Globules", "Video Lecture: Energy Minimization in Molecular Mechanics"],
-                exams: ["Biophysics Numerical Problem Set.pdf", "Final Written Exam.pdf"]
-            }
-        };
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <h3 class="text-sm font-bold text-brand-400 uppercase tracking-wider mb-3"><i class="fa-solid fa-code mr-2"></i>Data Analysis & Scripting</h3>
+                <ul class="text-xs text-slate-300 space-y-2">
+                    <li>Python (BioPython, Pandas, GeoPandas)</li>
+                    <li>R (Bioconductor, ggplot2)</li>
+                    <li>Linux Bash & HPC SLURM</li>
+                    <li>Galaxy Project Pipelines</li>
+                </ul>
+            </div>
 
-        function openCourseModal(key) {
-            const data = courseData[key];
-            if (!data) return;
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <h3 class="text-sm font-bold text-brand-400 uppercase tracking-wider mb-3"><i class="fa-solid fa-dna mr-2"></i>Immunoinformatics</h3>
+                <ul class="text-xs text-slate-300 space-y-2">
+                    <li>Multi-Epitope Construct Engineering</li>
+                    <li>IEDB / NetMHCpan Epitope Mapping</li>
+                    <li>AlphaFold2 Structure Prediction</li>
+                    <li>C-ImmSim Immune Simulation</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-            const contentContainer = document.getElementById('course-modal-content');
-            contentContainer.innerHTML = `
-                <div class="flex items-center space-x-3 mb-6">
-                    <div class="w-10 h-10 bg-brand-900/60 rounded-lg flex items-center justify-center border border-brand-500/30 text-brand-400">
-                        <i class="fa-solid fa-graduation-cap text-xl"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-white">${data.title}</h3>
-                        <p class="text-xs text-brand-400 font-medium">${data.module}</p>
-                    </div>
+    <!-- 4. SERVICES & TRAINING PANEL -->
+    <div id="panel-services" class="tab-panel hidden space-y-6">
+        <div class="border-b border-slate-800 pb-4">
+            <h2 class="text-2xl font-bold text-white">Services & Professional Training Programs</h2>
+            <p class="text-slate-400 text-sm mt-1">Intensive 3-month (minimum 12-week) capacity building workshops starting from 35,000 ETB.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-xs text-slate-400">3 Months (12 Wks)</span>
+                    <span class="text-brand-500 font-bold">35,000 ETB</span>
                 </div>
+                <h3 class="text-base font-bold text-white mb-2">Computational Genomics</h3>
+                <p class="text-slate-400 text-xs mb-4">Linux, Python, Bioconductor, and RNA-Seq data analysis workflow mastery.</p>
+            </div>
 
-                <div class="space-y-5 text-xs text-slate-300">
-                    <div>
-                        <h4 class="font-bold text-brand-400 mb-2 uppercase tracking-wider text-[11px]"><i class="fa-solid fa-file-pdf mr-1"></i> Module Overview & Lecture Files:</h4>
-                        <ul class="space-y-1.5">
-                            ${data.lectures.map(item => `
-                                <li class="bg-slate-950 p-2.5 rounded border border-slate-800 flex justify-between items-center">
-                                    <span>${item}</span>
-                                    <span class="text-brand-500 font-semibold cursor-pointer hover:underline">Download</span>
-                                </li>
-                            `).join('')}
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4 class="font-bold text-brand-400 mb-2 uppercase tracking-wider text-[11px]"><i class="fa-solid fa-video mr-1"></i> Video Lectures & Demonstrations:</h4>
-                        <ul class="space-y-1.5">
-                            ${data.videos.map(item => `
-                                <li class="bg-slate-950 p-2.5 rounded border border-slate-800 flex justify-between items-center">
-                                    <span>${item}</span>
-                                    <span class="text-brand-500 font-semibold cursor-pointer hover:underline">Watch Stream</span>
-                                </li>
-                            `).join('')}
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h4 class="font-bold text-brand-400 mb-2 uppercase tracking-wider text-[11px]"><i class="fa-solid fa-pen-to-square mr-1"></i> Exam & Assessment Materials:</h4>
-                        <ul class="space-y-1.5">
-                            ${data.exams.map(item => `
-                                <li class="bg-slate-950 p-2.5 rounded border border-slate-800 flex justify-between items-center">
-                                    <span>${item}</span>
-                                    <span class="text-brand-500 font-semibold cursor-pointer hover:underline">Download Paper</span>
-                                </li>
-                            `).join('')}
-                        </ul>
-                    </div>
+            <div class="bg-slate-900 p-6 rounded-xl border border-brand-500/50">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-xs text-slate-400">3 Months (12 Wks)</span>
+                    <span class="text-brand-500 font-bold">45,000 ETB</span>
                 </div>
-            `;
+                <h3 class="text-base font-bold text-white mb-2">Immunoinformatics & Vaccine Design</h3>
+                <p class="text-slate-400 text-xs mb-4">Epitope selection, linkers, adjuvants, docking, and immune simulation.</p>
+            </div>
 
-            document.getElementById('course-modal').classList.remove('hidden');
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-xs text-slate-400">3 Months (12 Wks)</span>
+                    <span class="text-brand-500 font-bold">55,000 ETB</span>
+                </div>
+                <h3 class="text-base font-bold text-white mb-2">GROMACS MD Simulations</h3>
+                <p class="text-slate-400 text-xs mb-4">Extended production runs, RMSD/RMSF plots, and MM/PBSA binding energies.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. WOLLO UNIVERSITY COURSES PANEL -->
+    <div id="panel-courses" class="tab-panel hidden space-y-6">
+        <div class="border-b border-slate-800 pb-4">
+            <h2 class="text-2xl font-bold text-white">Wollo University Course Hub</h2>
+            <p class="text-slate-400 text-sm mt-1">Select a course to open module documents, lecture files, video links, and past exam sets.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <h3 class="text-base font-bold text-white mb-1">Molecular Biology</h3>
+                <p class="text-slate-400 text-xs mb-4">Genome architecture, replication, transcription, and translation.</p>
+                <button onclick="openCourseModal('molbio')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs py-2 rounded font-semibold transition">Access Course Portal</button>
+            </div>
+
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <h3 class="text-base font-bold text-white mb-1">Fundamental Biotechnology</h3>
+                <p class="text-slate-400 text-xs mb-4">Bioprocess engineering, fermentation, and agricultural apps.</p>
+                <button onclick="openCourseModal('fundbiotech')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs py-2 rounded font-semibold transition">Access Course Portal</button>
+            </div>
+
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <h3 class="text-base font-bold text-white mb-1">Bioinformatics</h3>
+                <p class="text-slate-400 text-xs mb-4">Sequence alignments, BLAST, and phylogenetic trees.</p>
+                <button onclick="openCourseModal('bioinfo')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs py-2 rounded font-semibold transition">Access Course Portal</button>
+            </div>
+
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <h3 class="text-base font-bold text-white mb-1">Omics Science</h3>
+                <p class="text-slate-400 text-xs mb-4">Genomics, RNA-Seq transcriptomics, and proteomics.</p>
+                <button onclick="openCourseModal('omics')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs py-2 rounded font-semibold transition">Access Course Portal</button>
+            </div>
+
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <h3 class="text-base font-bold text-white mb-1">NanoBiotechnology</h3>
+                <p class="text-slate-400 text-xs mb-4">Bionanomaterials, targeted delivery, and nanobiosensors.</p>
+                <button onclick="openCourseModal('nanobiotech')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs py-2 rounded font-semibold transition">Access Course Portal</button>
+            </div>
+
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <h3 class="text-base font-bold text-white mb-1">Forensic Biotechnology</h3>
+                <p class="text-slate-400 text-xs mb-4">DNA profiling, STR typing, and legal chain of custody.</p>
+                <button onclick="openCourseModal('forensics')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs py-2 rounded font-semibold transition">Access Course Portal</button>
+            </div>
+
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <h3 class="text-base font-bold text-white mb-1">Molecular Biophysics</h3>
+                <p class="text-slate-400 text-xs mb-4">Biomolecular thermodynamics, spectroscopy, and protein folding.</p>
+                <button onclick="openCourseModal('biophysics')" class="w-full bg-brand-600 hover:bg-brand-500 text-white text-xs py-2 rounded font-semibold transition">Access Course Portal</button>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<!-- JAVASCRIPT FOR DYNAMIC TAB SWITCHING -->
+<script>
+    function switchTab(tabId) {
+        // Hide all panels
+        document.querySelectorAll('.tab-panel').forEach(panel => {
+            panel.classList.add('hidden');
+        });
+
+        // Reset button styles
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.classList.remove('bg-brand-600', 'text-white');
+            btn.classList.add('bg-slate-800', 'text-slate-300');
+        });
+
+        // Show selected panel
+        const selectedPanel = document.getElementById('panel-' + tabId);
+        if (selectedPanel) {
+            selectedPanel.classList.remove('hidden');
         }
 
-        function closeCourseModal() {
-            document.getElementById('course-modal').classList.add('hidden');
+        // Highlight selected tab button
+        const selectedTab = document.getElementById('tab-' + tabId);
+        if (selectedTab) {
+            selectedTab.classList.remove('bg-slate-800', 'text-slate-300');
+            selectedTab.classList.add('bg-brand-600', 'text-white');
         }
-    </script>
-</body>
-</html>
+    }
+</script>
