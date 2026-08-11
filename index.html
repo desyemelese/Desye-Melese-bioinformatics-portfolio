@@ -1,646 +1,2142 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desye Melese Sisay | Senior Bioinformatician & Lecturer</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            400: '#38bdf8',
-                            500: '#0284c7',
-                            600: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                            950: '#082f49',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                        mono: ['Fira Code', 'Monaco', 'monospace']
-                    }
-                }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="Desye Melese Sisay - Bioinformatics Researcher, Lecturer and Computational Biologist specializing in computational drug discovery, drug repurposing, vaccine design, immunoinformatics, NGS analysis and machine learning.">
+
+  <meta name="author" content="Desye Melese Sisay">
+  <meta name="robots" content="index, follow">
+
+  <title>Desye Melese Sisay | Bioinformatics Researcher</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: "#eff6ff",
+              100: "#dbeafe",
+              400: "#38bdf8",
+              500: "#0ea5e9",
+              600: "#0284c7",
+              700: "#0369a1",
+              900: "#0c4a6e",
+              950: "#082f49"
             }
-        }
-    </script>
-    
-    <!-- Font Awesome & Google Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+          },
 
-    <style>
-        .glass-panel {
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"],
+            mono: ["Fira Code", "monospace"]
+          }
         }
-        .glass-card {
-            background: rgba(30, 41, 59, 0.45);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .glass-card:hover {
-            border-color: rgba(56, 189, 248, 0.4);
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px -10px rgba(2, 132, 199, 0.2);
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #c084fc 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .gradient-bg {
-            background: linear-gradient(135deg, #0284c7 0%, #4f46e5 100%);
-        }
-        .bg-grid-pattern {
-            background-size: 40px 40px;
-            background-image: 
-                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-        }
-    </style>
+      }
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <style>
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(
+          circle at 10% 0%,
+          rgba(14, 165, 233, 0.10),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 90% 20%,
+          rgba(99, 102, 241, 0.10),
+          transparent 30%
+        ),
+        #020617;
+    }
+
+    .glass {
+      background: rgba(15, 23, 42, 0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+    }
+
+    .card {
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(56, 189, 248, 0.35);
+      box-shadow: 0 20px 50px rgba(2, 132, 199, 0.12);
+    }
+
+    .gradient-text {
+      background: linear-gradient(
+        135deg,
+        #38bdf8,
+        #818cf8,
+        #c084fc
+      );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 54px;
+      height: 3px;
+      margin-top: 10px;
+      border-radius: 999px;
+      background: linear-gradient(
+        90deg,
+        #38bdf8,
+        #818cf8
+      );
+    }
+
+    .timeline {
+      position: relative;
+      border-left: 1px solid rgba(56, 189, 248, 0.25);
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -7px;
+      top: 5px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: #0ea5e9;
+      box-shadow:
+        0 0 0 5px rgba(14, 165, 233, 0.10);
+    }
+
+    .skill {
+      background: rgba(30, 41, 59, 0.55);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+    }
+
+    .publication-number {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(8, 47, 73, 0.8);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      color: #38bdf8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+  </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans selection:bg-brand-500 selection:text-white bg-grid-pattern relative min-h-screen">
 
-    <!-- Ambient Background Glows -->
-    <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-brand-500/10 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse"></div>
-    <div class="fixed bottom-1/3 right-1/4 w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
 
-    <!-- Navigation Header -->
-    <header class="glass-panel sticky top-0 z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#hero" class="flex items-center space-x-3 group">
-                <div class="w-9 h-9 rounded-xl bg-brand-950 border border-brand-500/40 flex items-center justify-center text-brand-400 group-hover:scale-105 transition">
-                    <i class="fa-solid fa-dna text-base"></i>
-                </div>
-                <span class="text-base font-bold text-white tracking-wide group-hover:text-brand-400 transition">Desye Melese Sisay</span>
-            </a>
+<body class="text-slate-100 font-sans">
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden lg:flex items-center space-x-8 text-xs font-semibold text-slate-300">
-                <a href="#about" class="hover:text-brand-400 transition">About</a>
-                <a href="#appointments" class="hover:text-brand-400 transition">Appointments</a>
-                <a href="#publications" class="hover:text-brand-400 transition">Publications</a>
-                <a href="#skills" class="hover:text-brand-400 transition">Technical Stacks</a>
-                <a href="#courses" class="hover:text-brand-400 transition">Courses</a>
-                <a href="#training" class="hover:text-brand-400 transition">Training</a>
-            </nav>
 
-            <a href="#courses" class="gradient-bg text-white text-xs px-5 py-2.5 rounded-xl font-bold transition shadow-lg shadow-brand-500/20 hover:opacity-90">
-                Course Hub
-            </a>
-        </div>
-    </header>
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
 
-    <!-- HERO SECTION -->
-    <section id="hero" class="max-w-7xl mx-auto px-6 pt-10 pb-12">
-        <div class="glass-card p-8 md:p-12 rounded-3xl flex flex-col lg:flex-row items-center gap-10 border border-slate-800 shadow-2xl relative overflow-hidden">
-            <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+<header class="glass sticky top-0 z-50">
 
-            <!-- Standard Vector Senior Bioinformatician Visual Badge -->
-            <div class="relative shrink-0">
-                <div class="w-48 h-48 md:w-56 md:h-56 rounded-2xl border-2 border-brand-400/30 bg-slate-900 flex flex-col items-center justify-center relative shadow-2xl overflow-hidden group">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-brand-950/80 via-slate-900 to-indigo-950/80"></div>
-                    <div class="relative z-10 flex flex-col items-center text-center p-5 space-y-3">
-                        <div class="w-16 h-16 rounded-2xl bg-brand-500/10 border border-brand-400/40 flex items-center justify-center text-brand-400 text-3xl shadow-inner group-hover:scale-110 transition duration-500">
-                            <i class="fa-solid fa-microscope"></i>
-                        </div>
-                        <div>
-                            <span class="text-xs font-mono font-semibold text-brand-400 tracking-wider uppercase block">Bioinformatics</span>
-                            <span class="text-[10px] text-slate-400 font-mono">Structural Biology & Vaccine Design</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="absolute -bottom-3 -right-2 glass-panel text-brand-400 text-[11px] font-bold px-3 py-1.5 rounded-xl border border-slate-700/60 flex items-center gap-2 shadow-xl">
-                    <i class="fa-solid fa-shield-halved text-brand-400"></i> Senior Bioinformatician
-                </div>
-            </div>
+  <div
+    class="max-w-7xl mx-auto px-5 lg:px-8 py-4
+           flex items-center justify-between"
+  >
 
-            <!-- Header Bio & Credentials -->
-            <div class="space-y-4 text-center lg:text-left">
-                <div class="inline-flex items-center gap-2 bg-brand-950/80 text-brand-400 border border-brand-500/30 text-xs px-4 py-1.5 rounded-full font-semibold">
-                    <i class="fa-solid fa-graduation-cap"></i> M.Sc. in Bioinformatics &nbsp;|&nbsp; B.Sc. in Biotechnology
-                </div>
-                
-                <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
-                    Desye Melese <span class="gradient-text">Sisay</span>
-                </h1>
-                
-                <p class="text-slate-300 text-sm leading-relaxed max-w-2xl">
-                    Senior Bioinformatician and Academic Lecturer at Wollo University. Specializing in computational antigen design, immunoinformatics, multi-epitope protein engineering, molecular docking, and extended molecular dynamics (GROMACS) simulations.
-                </p>
+    <a href="#home" class="flex items-center gap-3">
 
-                <div class="pt-2 flex flex-wrap justify-center lg:justify-start gap-4">
-                    <a href="#publications" class="gradient-bg text-white text-xs px-6 py-3 rounded-xl font-bold transition flex items-center gap-2 shadow-lg shadow-brand-500/20 hover:opacity-90">
-                        <i class="fa-solid fa-book-bookmark"></i> Peer-Reviewed Publications
-                    </a>
-                    <a href="#skills" class="glass-card text-slate-200 text-xs px-6 py-3 rounded-xl font-bold transition flex items-center gap-2 hover:bg-slate-800">
-                        <i class="fa-solid fa-terminal"></i> Technical Stacks
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div
+        class="w-10 h-10 rounded-xl
+               bg-brand-950
+               border border-brand-400/30
+               flex items-center justify-center
+               text-brand-400"
+      >
+        <i class="fa-solid fa-dna"></i>
+      </div>
 
-    <!-- ACADEMIC CREDENTIALS -->
-    <section id="about" class="max-w-7xl mx-auto px-6 py-8">
-        <div class="max-w-3xl mb-6">
-            <h2 class="text-2xl font-extrabold text-white tracking-tight">Academic Credentials</h2>
-            <p class="text-slate-400 text-xs mt-1">Foundational and advanced academic qualifications.</p>
+      <div>
+
+        <div class="font-bold text-white">
+          Desye Melese Sisay
         </div>
 
-        <div class="grid md:grid-cols-2 gap-6">
-            <div class="glass-card p-6 rounded-2xl border border-slate-800">
-                <div class="w-10 h-10 bg-brand-950 rounded-xl flex items-center justify-center border border-brand-500/30 text-brand-400 text-lg font-bold mb-4">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white mb-1">M.Sc. in Bioinformatics</h3>
-                <p class="text-brand-400 text-xs font-semibold mb-3">Postgraduate Specialization</p>
-                <p class="text-slate-300 text-xs leading-relaxed">
-                    Advanced specialization in computational genomics, structural immunoinformatics, dynamic molecular modeling (GROMACS), phylogenomics, high-throughput sequence analysis, and binding free energy calculations.
-                </p>
-            </div>
-
-            <div class="glass-card p-6 rounded-2xl border border-slate-800">
-                <div class="w-10 h-10 bg-brand-950 rounded-xl flex items-center justify-center border border-brand-500/30 text-brand-400 text-lg font-bold mb-4">
-                    <i class="fa-solid fa-dna"></i>
-                </div>
-                <h3 class="text-lg font-bold text-white mb-1">B.Sc. in Biotechnology</h3>
-                <p class="text-brand-400 text-xs font-semibold mb-3">Undergraduate Degree</p>
-                <p class="text-slate-300 text-xs leading-relaxed">
-                    Core foundation in molecular genetics, bioprocess engineering, microbial biotechnology, recombinant DNA methodologies, structural biochemistry, and laboratory diagnostic techniques.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- INSTITUTIONAL APPOINTMENTS -->
-    <section id="appointments" class="max-w-7xl mx-auto px-6 py-8">
-        <div class="max-w-3xl mb-6">
-            <h2 class="text-2xl font-extrabold text-white tracking-tight">Institutional Appointments</h2>
-            <p class="text-slate-400 text-xs mt-1">Academic leadership and collaborative positions.</p>
+        <div
+          class="text-[10px] uppercase tracking-widest text-slate-400"
+        >
+          Bioinformatics & Computational Biology
         </div>
 
-        <div class="grid md:grid-cols-2 gap-6">
-            <div class="glass-card p-6 rounded-2xl border border-slate-800">
-                <div class="flex items-center space-x-3 mb-4">
-                    <div class="w-10 h-10 bg-brand-950 rounded-xl flex items-center justify-center border border-brand-500/30 text-brand-400 font-bold text-sm">
-                        WU
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-bold text-white">Wollo University</h3>
-                        <p class="text-xs text-brand-400 font-semibold">Lecturer & Senior Researcher | Department of Biotechnology</p>
-                    </div>
-                </div>
-                <p class="text-slate-300 text-xs leading-relaxed">
-                    Directing undergraduate and postgraduate biotechnology courses, managing computational laboratory resources, designing course curricula, and supervising research in reverse vaccinology and structural biology.
-                </p>
-            </div>
+      </div>
 
-            <div class="glass-card p-6 rounded-2xl border border-slate-800">
-                <div class="flex items-center space-x-3 mb-4">
-                    <div class="w-10 h-10 bg-indigo-950 rounded-xl flex items-center justify-center border border-indigo-500/30 text-indigo-400 font-bold text-sm">
-                        CDT
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-white">CDT-Africa</h3>
-                        <p class="text-xs text-brand-400 font-semibold">Collaborative Research Partner</p>
-                    </div>
-                </div>
-                <p class="text-slate-300 text-xs leading-relaxed">
-                    Collaborating on regional capacity-building initiatives, advanced bioinformatics training workshops, joint research, and computational drug and vaccine discovery workflows.
-                </p>
-            </div>
-        </div>
-    </section>
+    </a>
 
-    <!-- PEER-REVIEWED PUBLICATIONS -->
-    <section id="publications" class="max-w-7xl mx-auto px-6 py-8">
-        <div class="max-w-3xl mb-6">
-            <h2 class="text-2xl font-extrabold text-white tracking-tight">Peer-Reviewed Publications</h2>
-            <p class="text-slate-400 text-xs mt-1">Selected research in antigen design, immunoinformatics, and structural bioinformatics.</p>
-        </div>
 
-        <div class="space-y-5">
-            <!-- Publication 1 -->
-            <div class="glass-card p-6 rounded-2xl border border-slate-800">
-                <div class="flex flex-wrap justify-between items-center gap-2 mb-3">
-                    <span class="text-[10px] bg-brand-950 text-brand-400 border border-brand-500/30 px-3 py-1 rounded-full font-bold uppercase tracking-wider">PLOS ONE 2026</span>
-                    <span class="text-xs text-slate-400 font-mono"><i class="fa-solid fa-file-contract mr-1"></i> Research Article</span>
-                </div>
-                <h3 class="text-lg font-bold text-white mb-2 leading-snug">
-                    In silico design of novel recombinant antigens containing immunologically relevant regions of wild-type and escape mutant variants of HBsAg
-                </h3>
-                <p class="text-slate-300 text-xs font-medium mb-4">
-                    <strong class="text-slate-200">Authors:</strong> YA Workneh, <span class="text-brand-400 font-semibold">DM Sisay</span>, A Fekadu, AT Bika, AT Mogus, T Sisay Tessema. <span class="text-slate-400 font-mono">PLOS ONE 21 (3), e0344362.</span>
-                </p>
-                <a href="https://doi.org/10.1371/journal.pone.0344362" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs text-brand-400 hover:text-brand-300 font-semibold transition">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Article (PLOS ONE)
-                </a>
-            </div>
+    <nav class="hidden lg:flex gap-6 text-sm text-slate-300">
 
-            <!-- Publication 2 -->
-            <div class="glass-card p-6 rounded-2xl border border-slate-800">
-                <div class="flex flex-wrap justify-between items-center gap-2 mb-3">
-                    <span class="text-[10px] bg-brand-950 text-brand-400 border border-brand-500/30 px-3 py-1 rounded-full font-bold uppercase tracking-wider">Bioinformatics & Biology Insights 2026</span>
-                    <span class="text-xs text-slate-400 font-mono"><i class="fa-solid fa-file-contract mr-1"></i> Research Article</span>
-                </div>
-                <h3 class="text-lg font-bold text-white mb-2 leading-snug">
-                    In silico Design and Analysis of Engineered Proteins Containing Multi-Epitope and Immunodominant Domains Derived From Rickettsia prowazekii Antigens
-                </h3>
-                <p class="text-slate-300 text-xs font-medium mb-4">
-                    <strong class="text-slate-200">Authors:</strong> MA Abebe, <span class="text-brand-400 font-semibold">DM Sisay</span>, A Fekadu, AT Bika, AT Mogus, TS Tessema. <span class="text-slate-400 font-mono">Bioinformatics and Biology Insights 20, 11779322261461934.</span>
-                </p>
-                <a href="https://doi.org/10.1177/11779322261461934" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs text-brand-400 hover:text-brand-300 font-semibold transition">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Journal
-                </a>
-            </div>
-        </div>
-    </section>
+      <a href="#about" class="hover:text-brand-400">
+        About
+      </a>
 
-    <!-- TECHNICAL STACKS & EXECUTABLE WORKFLOW -->
-    <section id="skills" class="max-w-7xl mx-auto px-6 py-8">
-        <div class="max-w-3xl mb-6">
-            <h2 class="text-2xl font-extrabold text-white tracking-tight">Technical Stacks & Workflows</h2>
-            <p class="text-slate-400 text-xs mt-1">Computational biology suites, high-throughput scripting, and structural dynamics.</p>
-        </div>
+      <a href="#experience" class="hover:text-brand-400">
+        Experience
+      </a>
 
-        <div class="grid md:grid-cols-3 gap-6 mb-6">
-            <div class="glass-card p-6 rounded-2xl border border-slate-800">
-                <div class="flex items-center space-x-3 mb-4">
-                    <div class="w-9 h-9 bg-brand-950 rounded-lg flex items-center justify-center text-brand-400">
-                        <i class="fa-solid fa-atom"></i>
-                    </div>
-                    <h3 class="text-xs font-bold text-white uppercase tracking-wider">Molecular Dynamics</h3>
-                </div>
-                <ul class="text-xs text-slate-300 space-y-2 font-mono">
-                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i>GROMACS (200ns Production)</li>
-                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i>AutoDock Vina Docking</li>
-                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i>PyMOL & ChimeraX</li>
-                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i>PROCHECK Validation</li>
-                </ul>
-            </div>
+      <a href="#research" class="hover:text-brand-400">
+        Research
+      </a>
 
-            <div class="glass-card p-6 rounded-2xl border border-slate-800">
-                <div class="flex items-center space-x-3 mb-4">
-                    <div class="w-9 h-9 bg-brand-950 rounded-lg flex items-center justify-center text-brand-400">
-                        <i class="fa-solid fa-terminal"></i>
-                    </div>
-                    <h3 class="text-xs font-bold text-white uppercase tracking-wider">Scripting & High Performance</h3>
-                </div>
-                <ul class="text-xs text-slate-300 space-y-2 font-mono">
-                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i>Python (Pandas, BioPython)</li>
-                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i>R (Bioconductor, ggplot2)</li>
-                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i>Linux Shell & SLURM</li>
-                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i>Galaxy Server Integration</li>
-                </ul>
-            </div>
+      <a href="#publications" class="hover:text-brand-400">
+        Publications
+      </a>
 
-            <div class="glass-card p-6 rounded-2xl border border-slate-800">
-                <div class="flex items-center space-x-3 mb-4">
-                    <div class="w-9 h-9 bg-brand-950 rounded-lg flex items-center justify-center text-brand-400">
-                        <i class="fa-solid fa-shield-virus"></i>
-                    </div>
-                    <h3 class="text-xs font-bold text-white uppercase tracking-wider">Immunoinformatics</h3>
-                </div>
-                <ul class="text-xs text-slate-300 space-y-2 font-mono">
-                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i>Multi-Epitope Construction</li>
-                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i>IEDB / NetMHCpan Epitopes</li>
-                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i>AlphaFold2 Structure Modeling</li>
-                    <li class="flex items-center"><i class="fa-solid fa-check text-brand-400 mr-2"></i>C-ImmSim Immune Modeling</li>
-                </ul>
-            </div>
-        </div>
+      <a href="#skills" class="hover:text-brand-400">
+        Skills
+      </a>
 
-        <!-- Sample Pipeline Snippet Terminal -->
-        <div class="glass-card p-5 rounded-2xl border border-slate-800 font-mono text-xs text-slate-300 space-y-2 bg-slate-950/90">
-            <div class="flex justify-between items-center border-b border-slate-800 pb-2">
-                <div class="flex items-center space-x-2">
-                    <span class="w-2.5 h-2.5 bg-red-500 rounded-full"></span>
-                    <span class="w-2.5 h-2.5 bg-yellow-500 rounded-full"></span>
-                    <span class="w-2.5 h-2.5 bg-green-500 rounded-full"></span>
-                    <span class="ml-2 text-slate-400 text-[11px]">gromacs_md_production.sh</span>
-                </div>
-                <span class="text-brand-400 text-[11px]">SLURM Batch Executable</span>
-            </div>
-            <pre class="text-slate-300 overflow-x-auto leading-relaxed pt-2">
-<span class="text-slate-500"># 1. Energy Minimization & System Equilibration</span>
-gmx grompp -f em.mdp -c complex.gro -p topol.top -o em.tpr
-gmx mdrun -v -deffnm em
+      <a href="#education" class="hover:text-brand-400">
+        Education
+      </a>
 
-<span class="text-slate-500"># 2. Extended MD Simulation Production</span>
-gmx grompp -f md_200ns.mdp -c npt.gro -t npt.cpt -p topol.top -o md_200.tpr
-gmx mdrun -deffnm md_200 -nb gpu -pme gpu
+      <a href="#training" class="hover:text-brand-400">
+        Training
+      </a>
 
-<span class="text-slate-500"># 3. Binding Free Energy Calculation (MM/PBSA)</span>
-gmx_MMPBSA -O -i mmpbsa.in -cs md_200.tpr -ci index.ndx -cg 1 2 -ct md_200_noPBC.xtc</pre>
-        </div>
-    </section>
+      <a href="#contact" class="hover:text-brand-400">
+        Contact
+      </a>
 
-    <!-- COURSES HUB -->
-    <section id="courses" class="max-w-7xl mx-auto px-6 py-8">
-        <div class="max-w-3xl mb-6">
-            <h2 class="text-2xl font-extrabold text-white tracking-tight">Wollo University Course Hub</h2>
-            <p class="text-slate-400 text-xs mt-1">Select a course module to view lecture materials, tutorials, and examination resources.</p>
-        </div>
+    </nav>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
-                <div>
-                    <span class="text-[10px] bg-brand-950 text-brand-400 border border-brand-500/30 px-3 py-1 rounded-full font-bold">Core Module</span>
-                    <h3 class="text-base font-bold text-white mt-4 mb-2">Molecular Biology</h3>
-                    <p class="text-slate-400 text-xs mb-6">Genome architecture, replication mechanics, transcription, translation, and cloning.</p>
-                </div>
-                <button onclick="openCourseModal('molbio')" class="w-full gradient-bg text-white text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2 hover:opacity-90">
-                    <i class="fa-solid fa-folder-open"></i> Access Course Files
-                </button>
-            </div>
 
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
-                <div>
-                    <span class="text-[10px] bg-brand-950 text-brand-400 border border-brand-500/30 px-3 py-1 rounded-full font-bold">Foundational</span>
-                    <h3 class="text-base font-bold text-white mt-4 mb-2">Fundamental Biotechnology</h3>
-                    <p class="text-slate-400 text-xs mb-6">Bioprocess engineering principles, microbial fermentation, and industrial bioprocessing.</p>
-                </div>
-                <button onclick="openCourseModal('fundbiotech')" class="w-full gradient-bg text-white text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2 hover:opacity-90">
-                    <i class="fa-solid fa-folder-open"></i> Access Course Files
-                </button>
-            </div>
+    <a
+      href="#contact"
+      class="hidden sm:inline-flex
+             bg-brand-600
+             hover:bg-brand-500
+             px-5 py-2.5
+             rounded-xl
+             text-sm
+             font-semibold"
+    >
+      Contact
+    </a>
 
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
-                <div>
-                    <span class="text-[10px] bg-brand-950 text-brand-400 border border-brand-500/30 px-3 py-1 rounded-full font-bold">Computational</span>
-                    <h3 class="text-base font-bold text-white mt-4 mb-2">Bioinformatics</h3>
-                    <p class="text-slate-400 text-xs mb-6">Pairwise/multiple sequence alignment, BLAST algorithms, and phylogenetic trees.</p>
-                </div>
-                <button onclick="openCourseModal('bioinfo')" class="w-full gradient-bg text-white text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2 hover:opacity-90">
-                    <i class="fa-solid fa-folder-open"></i> Access Course Files
-                </button>
-            </div>
+  </div>
 
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
-                <div>
-                    <span class="text-[10px] bg-brand-950 text-brand-400 border border-brand-500/30 px-3 py-1 rounded-full font-bold">Advanced</span>
-                    <h3 class="text-base font-bold text-white mt-4 mb-2">Omics Science</h3>
-                    <p class="text-slate-400 text-xs mb-6">Next-generation sequencing, RNA-Seq transcriptomics, proteomics, and systems biology.</p>
-                </div>
-                <button onclick="openCourseModal('omics')" class="w-full gradient-bg text-white text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2 hover:opacity-90">
-                    <i class="fa-solid fa-folder-open"></i> Access Course Files
-                </button>
-            </div>
+</header>
 
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
-                <div>
-                    <span class="text-[10px] bg-brand-950 text-brand-400 border border-brand-500/30 px-3 py-1 rounded-full font-bold">Interdisciplinary</span>
-                    <h3 class="text-base font-bold text-white mt-4 mb-2">NanoBiotechnology</h3>
-                    <p class="text-slate-400 text-xs mb-6">Nanomaterial synthesis, targeted drug delivery platforms, and nanobiosensors.</p>
-                </div>
-                <button onclick="openCourseModal('nanobiotech')" class="w-full gradient-bg text-white text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2 hover:opacity-90">
-                    <i class="fa-solid fa-folder-open"></i> Access Course Files
-                </button>
-            </div>
 
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
-                <div>
-                    <span class="text-[10px] bg-brand-950 text-brand-400 border border-brand-500/30 px-3 py-1 rounded-full font-bold">Specialized</span>
-                    <h3 class="text-base font-bold text-white mt-4 mb-2">Forensic Biotechnology</h3>
-                    <p class="text-slate-400 text-xs mb-6">DNA profiling, STR amplification, mitochondrial DNA typing, and chain of custody.</p>
-                </div>
-                <button onclick="openCourseModal('forensics')" class="w-full gradient-bg text-white text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2 hover:opacity-90">
-                    <i class="fa-solid fa-folder-open"></i> Access Course Files
-                </button>
-            </div>
 
-            <div class="glass-card p-6 rounded-2xl flex flex-col justify-between">
-                <div>
-                    <span class="text-[10px] bg-brand-950 text-brand-400 border border-brand-500/30 px-3 py-1 rounded-full font-bold">Biophysics</span>
-                    <h3 class="text-base font-bold text-white mt-4 mb-2">Molecular Biophysics</h3>
-                    <p class="text-slate-400 text-xs mb-6">Thermodynamics of biomolecules, spectroscopy (CD/NMR), and protein folding dynamics.</p>
-                </div>
-                <button onclick="openCourseModal('biophysics')" class="w-full gradient-bg text-white text-xs font-bold py-2.5 rounded-xl transition flex items-center justify-center gap-2 hover:opacity-90">
-                    <i class="fa-solid fa-folder-open"></i> Access Course Files
-                </button>
-            </div>
+<main>
 
-        </div>
-    </section>
 
-    <!-- TRAINING & CAPACITY BUILDING -->
-    <section id="training" class="max-w-7xl mx-auto px-6 py-8">
-        <div class="max-w-3xl mb-6">
-            <h2 class="text-2xl font-extrabold text-white tracking-tight">Training & Capacity Building</h2>
-            <p class="text-slate-400 text-xs mt-1">Intensive 12-week professional capacity-building programs.</p>
-        </div>
+<!-- =========================================================
+     HERO
+========================================================= -->
 
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="glass-card p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
-                <div>
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="text-[10px] bg-slate-800 text-slate-300 px-3 py-1 rounded-full font-mono">12 Weeks</span>
-                        <span class="text-lg font-black text-brand-400">35,000 ETB</span>
-                    </div>
-                    <h3 class="text-base font-bold text-white mb-2">Computational Genomics</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed mb-6">
-                        Linux terminal workflows, Python/BioPython pipelines, R Bioconductor, and RNA-Seq differential expression analysis.
-                    </p>
-                </div>
-                <button class="w-full glass-card hover:bg-brand-600 text-white text-xs font-bold py-2.5 rounded-xl transition border border-brand-500/30">Enroll Program</button>
-            </div>
+<section
+  id="home"
+  class="max-w-7xl mx-auto px-5 lg:px-8
+         pt-16 pb-20"
+>
 
-            <div class="glass-card p-6 rounded-2xl border-2 border-brand-500/50 flex flex-col justify-between relative">
-                <div class="absolute -top-3 right-6 bg-brand-500 text-white text-[10px] font-bold px-3 py-0.5 rounded-full uppercase tracking-wider">
-                    Most Requested
-                </div>
-                <div>
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="text-[10px] bg-brand-950 text-brand-400 px-3 py-1 rounded-full font-mono">12 Weeks</span>
-                        <span class="text-lg font-black text-brand-400">45,000 ETB</span>
-                    </div>
-                    <h3 class="text-base font-bold text-white mb-2">Immunoinformatics & Vaccine Design</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed mb-6">
-                        HTL/CTL epitope prediction, construct assembly, AlphaFold2 validation, docking, and C-ImmSim immune modeling.
-                    </p>
-                </div>
-                <button class="w-full gradient-bg text-white text-xs font-bold py-2.5 rounded-xl transition shadow-lg shadow-brand-500/20 hover:opacity-90">Enroll Program</button>
-            </div>
+  <div
+    class="grid lg:grid-cols-[1.35fr_.65fr]
+           gap-10 items-center"
+  >
 
-            <div class="glass-card p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
-                <div>
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="text-[10px] bg-slate-800 text-slate-300 px-3 py-1 rounded-full font-mono">12 Weeks</span>
-                        <span class="text-lg font-black text-brand-400">55,000 ETB</span>
-                    </div>
-                    <h3 class="text-base font-bold text-white mb-2">GROMACS Molecular Dynamics</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed mb-6">
-                        Structure preparation, AutoDock Vina virtual screening, extended GROMACS production, RMSD/RMSF, and MM/PBSA energy calculations.
-                    </p>
-                </div>
-                <button class="w-full glass-card hover:bg-brand-600 text-white text-xs font-bold py-2.5 rounded-xl transition border border-brand-500/30">Enroll Program</button>
-            </div>
-        </div>
-    </section>
+    <div>
 
-    <!-- FOOTER -->
-    <footer class="border-t border-slate-800/80 bg-slate-950/80 backdrop-blur-md py-8 mt-12">
-        <div class="max-w-7xl mx-auto px-6 text-center text-xs text-slate-400">
-            <p>© Desye Melese Sisay — Department of Biotechnology, Wollo University, Ethiopia.</p>
-        </div>
-    </footer>
+      <div
+        class="inline-flex items-center gap-2
+               px-4 py-2
+               rounded-full
+               bg-brand-950/70
+               border border-brand-400/20
+               text-brand-400
+               text-xs
+               font-semibold
+               mb-6"
+      >
 
-    <!-- COURSE DETAIL MODAL PORTAL -->
-    <div id="course-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
-        <div class="glass-panel border border-slate-800 rounded-3xl max-w-2xl w-full p-6 md:p-8 max-h-[85vh] overflow-y-auto relative shadow-2xl">
-            <button onclick="closeCourseModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white text-2xl transition">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-            
-            <div id="course-modal-content">
-                <!-- Content injected via JavaScript -->
-            </div>
+        <i class="fa-solid fa-microscope"></i>
 
-            <div class="mt-8 pt-4 border-t border-slate-800/80 flex justify-end">
-                <button onclick="closeCourseModal()" class="glass-card text-slate-200 text-xs font-bold px-5 py-2.5 rounded-xl hover:bg-slate-800 transition">
-                    Close Portal
-                </button>
-            </div>
-        </div>
+        Bioinformatics Researcher
+        • Lecturer
+        • Computational Biologist
+
+      </div>
+
+
+      <h1
+        class="text-4xl md:text-6xl
+               font-extrabold
+               tracking-tight
+               leading-tight"
+      >
+
+        Desye Melese
+
+        <span class="gradient-text">
+          Sisay
+        </span>
+
+      </h1>
+
+
+      <p
+        class="mt-6
+               text-lg md:text-xl
+               text-slate-300
+               leading-relaxed
+               max-w-3xl"
+      >
+
+        Bioinformatics professional specializing in
+        computational drug discovery, drug repurposing,
+        vaccine design, immunoinformatics, diagnostic
+        biomarker discovery, molecular docking,
+        molecular dynamics simulations, NGS analysis,
+        machine learning and bioinformatics pipeline
+        development.
+
+      </p>
+
+
+      <div class="mt-8 flex flex-wrap gap-3">
+
+        <a
+          href="#research"
+          class="bg-brand-600
+                 hover:bg-brand-500
+                 px-6 py-3
+                 rounded-xl
+                 font-semibold"
+        >
+          Explore Research
+        </a>
+
+
+        <a
+          href="#publications"
+          class="glass
+                 px-6 py-3
+                 rounded-xl
+                 font-semibold
+                 hover:border-brand-400/30"
+        >
+          Publications
+        </a>
+
+
+        <a
+          href="https://linkedin.com/in/DesyeMelese"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="glass
+                 px-5 py-3
+                 rounded-xl
+                 text-slate-200
+                 hover:text-brand-400"
+        >
+
+          <i class="fa-brands fa-linkedin mr-2"></i>
+
+          LinkedIn
+
+        </a>
+
+      </div>
+
+
+      <div
+        class="mt-8
+               flex flex-wrap
+               gap-x-7 gap-y-3
+               text-sm text-slate-400"
+      >
+
+        <span>
+          <i class="fa-solid fa-location-dot text-brand-400 mr-2"></i>
+          Wollo, Ethiopia
+        </span>
+
+        <span>
+          <i class="fa-solid fa-location-dot text-brand-400 mr-2"></i>
+          Addis Ababa, Ethiopia
+        </span>
+
+        <span>
+          <i class="fa-solid fa-envelope text-brand-400 mr-2"></i>
+          melesedes23@gmail.com
+        </span>
+
+      </div>
+
     </div>
 
-    <!-- JAVASCRIPT MODAL LOGIC -->
-    <script>
-        const courseData = {
-            molbio: {
-                title: "Molecular Biology",
-                module: "Wollo University - Module Code: MbI-401",
-                lectures: ["Lecture 1: Genome Architecture & DNA Replication.pdf", "Lecture 2: Transcription & RNA Processing.pdf", "Lecture 3: Translation & Gene Regulation.pdf"],
-                videos: ["Video: Recombinant DNA Technology & Cloning Mechanics", "Video: Polymerase Chain Reaction (PCR) Practical Demonstration"],
-                exams: ["Mid-Semester Exam & Answer Key.pdf", "Final Theory Examination Paper.pdf"]
-            },
-            fundbiotech: {
-                title: "Fundamental Biotechnology",
-                module: "Wollo University - Module Code: FBt-202",
-                lectures: ["Lecture 1: Microbial Biotechnology Overview.pdf", "Lecture 2: Fermentation Kinetics & Bioreactor Design.pdf", "Lecture 3: Agricultural Biotechnology Applications.pdf"],
-                videos: ["Video: Industrial Bioreactor Operation", "Video: Upstream and Downstream Bioprocess Operations"],
-                exams: ["Continuous Assessment Test.pdf", "Semester Final Examination.pdf"]
-            },
-            bioinfo: {
-                title: "Bioinformatics",
-                module: "Wollo University - Module Code: Binf-301",
-                lectures: ["Lecture 1: Biological Databases & File Formats.pdf", "Lecture 2: Sequence Alignments & Substitution Matrices.pdf", "Lecture 3: BLAST Algorithms & Phylogenetics.pdf"],
-                videos: ["Video Practical: NCBI Entrez & Command-Line BLAST", "Video Practical: MEGA Phylogenetic Tree Construction"],
-                exams: ["Bioinformatics Computer Lab Practical Exam.pdf", "Final Theory Examination.pdf"]
-            },
-            omics: {
-                title: "Omics Science",
-                module: "Wollo University - Module Code: Oms-402",
-                lectures: ["Lecture 1: NGS & High-Throughput Sequencing.pdf", "Lecture 2: RNA-Seq Differential Expression Analysis.pdf", "Lecture 3: Proteomics & Mass Spectrometry Data.pdf"],
-                videos: ["Video Walkthrough: RNA-Seq Data Processing in R/Bioconductor", "Video Walkthrough: Galaxy Project Workflow Setup"],
-                exams: ["Transcriptomics Project Evaluation.pdf", "Final Omics Exam Paper.pdf"]
-            },
-            nanobiotech: {
-                title: "NanoBiotechnology",
-                module: "Wollo University - Module Code: Nbt-403",
-                lectures: ["Lecture 1: Bionanomaterial Synthesis & Characterization.pdf", "Lecture 2: Nanoparticles in Targeted Drug Delivery.pdf", "Lecture 3: Biosensors & Diagnostic Devices.pdf"],
-                videos: ["Video Demonstration: Functionalizing Nanoparticle Surfaces", "Video Demonstration: Atomic Force Microscopy in Biology"],
-                exams: ["Mid-Term Assessment.pdf", "Final Nanobiotech Case Study Exam.pdf"]
-            },
-            forensics: {
-                title: "Forensic Biotechnology",
-                module: "Wollo University - Module Code: Fbt-404",
-                lectures: ["Lecture 1: DNA Fingerprinting & STR Analysis.pdf", "Lecture 2: Mitochondrial DNA & Y-STR Markers.pdf", "Lecture 3: Forensic Serology & Chain of Custody.pdf"],
-                videos: ["Video Practical: Capillary Electrophoresis & STR Allele Calling", "Video Practical: Calculating Paternity Index & Likelihood Ratios"],
-                exams: ["Forensic Case Analysis Test.pdf", "Final Examination.pdf"]
-            },
-            biophysics: {
-                title: "Molecular Biophysics",
-                module: "Wollo University - Module Code: Mbp-405",
-                lectures: ["Lecture 1: Protein Thermodynamics & Conformational Entropy.pdf", "Lecture 2: Spectroscopy Methods (CD, NMR, Fluorescence).pdf", "Lecture 3: Forces Governing Biomolecular Folding.pdf"],
-                videos: ["Video Lecture: Protein Folding Landscapes & Molten Globules", "Video Lecture: Energy Minimization in Molecular Mechanics"],
-                exams: ["Biophysics Numerical Problem Set.pdf", "Final Written Exam.pdf"]
-            }
-        };
 
-        function openCourseModal(key) {
-            const data = courseData[key];
-            if (!data) return;
+    <!-- HERO CARD -->
 
-            const contentContainer = document.getElementById('course-modal-content');
-            contentContainer.innerHTML = `
-                <div class="flex items-center space-x-4 mb-6">
-                    <div class="w-12 h-12 bg-brand-950 rounded-2xl flex items-center justify-center border border-brand-500/30 text-brand-400 text-xl font-bold">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-extrabold text-white">${data.title}</h3>
-                        <p class="text-xs text-brand-400 font-medium">${data.module}</p>
-                    </div>
-                </div>
+    <div class="glass rounded-3xl p-8 text-center">
 
-                <div class="space-y-6 text-xs text-slate-300">
-                    <div>
-                        <h4 class="font-bold text-white mb-3 uppercase tracking-wider text-[11px] flex items-center gap-2">
-                            <i class="fa-solid fa-file-pdf text-brand-400"></i> Lecture Slides & Modules
-                        </h4>
-                        <div class="space-y-2">
-                            ${data.lectures.map(item => `
-                                <div class="glass-card p-3 rounded-xl flex justify-between items-center border border-slate-800">
-                                    <span class="font-mono text-slate-300">${item}</span>
-                                    <span class="text-brand-400 font-bold cursor-pointer hover:underline text-[11px]">Download</span>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
+      <div
+        class="mx-auto
+               w-36 h-36
+               rounded-3xl
+               bg-gradient-to-br
+               from-brand-950
+               to-indigo-950
+               border border-brand-400/25
+               flex items-center justify-center"
+      >
 
-                    <div>
-                        <h4 class="font-bold text-white mb-3 uppercase tracking-wider text-[11px] flex items-center gap-2">
-                            <i class="fa-solid fa-video text-brand-400"></i> Recorded Demonstrations
-                        </h4>
-                        <div class="space-y-2">
-                            ${data.videos.map(item => `
-                                <div class="glass-card p-3 rounded-xl flex justify-between items-center border border-slate-800">
-                                    <span class="font-mono text-slate-300">${item}</span>
-                                    <span class="text-brand-400 font-bold cursor-pointer hover:underline text-[11px]">Watch Stream</span>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
+        <i
+          class="fa-solid fa-dna
+                 text-6xl
+                 text-brand-400"
+        ></i>
 
-                    <div>
-                        <h4 class="font-bold text-white mb-3 uppercase tracking-wider text-[11px] flex items-center gap-2">
-                            <i class="fa-solid fa-pen-to-square text-brand-400"></i> Examination Materials
-                        </h4>
-                        <div class="space-y-2">
-                            ${data.exams.map(item => `
-                                <div class="glass-card p-3 rounded-xl flex justify-between items-center border border-slate-800">
-                                    <span class="font-mono text-slate-300">${item}</span>
-                                    <span class="text-brand-400 font-bold cursor-pointer hover:underline text-[11px]">Download Paper</span>
-                                </div>
-                            `).join('')}
-                        </div>
-                    </div>
-                </div>
-            `;
+      </div>
 
-            document.getElementById('course-modal').classList.remove('hidden');
-        }
 
-        function closeCourseModal() {
-            document.getElementById('course-modal').classList.add('hidden');
-        }
-    </script>
+      <h2 class="mt-6 text-2xl font-bold">
+        Computational Life Sciences
+      </h2>
+
+
+      <p class="mt-2 text-sm text-slate-400">
+
+        From genomic data and molecular structures
+        to predictive models and translational
+        biomedical research.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section
+  id="about"
+  class="max-w-7xl mx-auto
+         px-5 lg:px-8
+         py-16"
+>
+
+  <div class="section-title mb-8">
+
+    <h2 class="text-3xl font-bold">
+      Professional Profile
+    </h2>
+
+    <p class="text-slate-400 mt-2">
+      Research, teaching and computational biology expertise.
+    </p>
+
+  </div>
+
+
+  <div class="glass rounded-3xl p-7 md:p-10">
+
+    <p class="text-slate-300 leading-8">
+
+      As a highly skilled Bioinformatics professional with
+      an MSc in Bioinformatics and a BSc in Biotechnology,
+      I have specialized expertise in computational drug
+      discovery, drug repurposing, computational design
+      of diagnostic biomarkers and potential vaccine
+      candidates.
+
+    </p>
+
+
+    <p class="text-slate-300 leading-8 mt-5">
+
+      My expertise includes bioinformatics workflow and
+      pipeline development, molecular docking, molecular
+      dynamics simulations, next-generation sequencing
+      data analysis, Python, R, Linux-based computing,
+      statistical analysis and machine learning.
+
+    </p>
+
+
+    <p class="text-slate-300 leading-8 mt-5">
+
+      My research experience includes target protein
+      identification, epitope prediction, structural
+      vaccinology, comparative genomics, pangenome
+      analysis, biomarker discovery and computational
+      infectious-disease research.
+
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EXPERIENCE
+========================================================= -->
+
+<section
+  id="experience"
+  class="max-w-7xl mx-auto
+         px-5 lg:px-8
+         py-16"
+>
+
+  <div class="section-title mb-10">
+
+    <h2 class="text-3xl font-bold">
+      Professional Experience
+    </h2>
+
+    <p class="text-slate-400 mt-2">
+      Academic, research and training experience.
+    </p>
+
+  </div>
+
+
+  <div class="space-y-10">
+
+
+    <!-- CDT AFRICA -->
+
+    <article class="timeline pl-8 relative">
+
+      <span class="timeline-dot"></span>
+
+      <div class="glass card rounded-2xl p-7">
+
+        <div
+          class="flex flex-col
+                 md:flex-row
+                 md:justify-between
+                 gap-2"
+        >
+
+          <div>
+
+            <h3 class="text-xl font-bold">
+              Bioinformatics Researcher
+            </h3>
+
+            <p class="text-brand-400 font-semibold">
+
+              Center for Innovative Drug Development
+              and Therapeutic Trials for Africa
+              (CDT-Africa)
+
+            </p>
+
+          </div>
+
+          <span class="text-sm text-slate-400">
+            May 2023 – Present
+          </span>
+
+        </div>
+
+
+        <ul
+          class="mt-5
+                 space-y-3
+                 text-sm
+                 text-slate-300
+                 list-disc
+                 list-inside"
+        >
+
+          <li>
+            Computational vaccine design for infectious
+            disease pathogens including diarrheagenic
+            E. coli.
+          </li>
+
+          <li>
+            Drug repurposing using molecular docking
+            and molecular dynamics simulations.
+          </li>
+
+          <li>
+            Biomarker discovery and diagnostic kit
+            development for infectious diseases.
+          </li>
+
+          <li>
+            Structural bioinformatics and protein
+            modeling.
+          </li>
+
+          <li>
+            Epitope prediction and reverse-vaccinology
+            based vaccine design.
+          </li>
+
+          <li>
+            Comparative genomics and pangenome analysis.
+          </li>
+
+          <li>
+            Linux-based high-performance bioinformatics
+            computing.
+          </li>
+
+        </ul>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- WOLLO UNIVERSITY -->
+
+    <article class="timeline pl-8 relative">
+
+      <span class="timeline-dot"></span>
+
+      <div class="glass card rounded-2xl p-7">
+
+        <div
+          class="flex flex-col
+                 md:flex-row
+                 md:justify-between
+                 gap-2"
+        >
+
+          <div>
+
+            <h3 class="text-xl font-bold">
+              Lecturer and Researcher
+            </h3>
+
+            <p class="text-brand-400 font-semibold">
+              Wollo University – Department of Biotechnology
+            </p>
+
+          </div>
+
+          <span class="text-sm text-slate-400">
+            October 2020 – Present
+          </span>
+
+        </div>
+
+
+        <div class="grid md:grid-cols-2 gap-6 mt-6">
+
+
+          <div>
+
+            <h4 class="font-semibold text-white mb-3">
+              Teaching & Supervision
+            </h4>
+
+            <ul
+              class="space-y-2
+                     text-sm
+                     text-slate-300
+                     list-disc
+                     list-inside"
+            >
+
+              <li>
+                Supervision of student research projects.
+              </li>
+
+              <li>
+                MSc and BSc thesis supervision.
+              </li>
+
+              <li>
+                Teaching Bioinformatics.
+              </li>
+
+              <li>
+                Teaching Nano Biotechnology.
+              </li>
+
+              <li>
+                Teaching Forensic Biotechnology.
+              </li>
+
+            </ul>
+
+          </div>
+
+
+          <div>
+
+            <h4 class="font-semibold text-white mb-3">
+              Research & Innovation
+            </h4>
+
+            <ul
+              class="space-y-2
+                     text-sm
+                     text-slate-300
+                     list-disc
+                     list-inside"
+            >
+
+              <li>
+                Computational drug discovery.
+              </li>
+
+              <li>
+                Vaccine development.
+              </li>
+
+              <li>
+                Drug repurposing.
+              </li>
+
+              <li>
+                Epitope prediction and immunoinformatics.
+              </li>
+
+              <li>
+                Python and R training.
+              </li>
+
+              <li>
+                Machine learning for biological datasets.
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     RESEARCH
+========================================================= -->
+
+<section
+  id="research"
+  class="max-w-7xl mx-auto
+         px-5 lg:px-8
+         py-16"
+>
+
+  <div class="section-title mb-10">
+
+    <h2 class="text-3xl font-bold">
+      Research Projects
+    </h2>
+
+    <p class="text-slate-400 mt-2">
+      Selected computational and translational research areas.
+    </p>
+
+  </div>
+
+
+  <div class="grid md:grid-cols-2 gap-6">
+
+
+    <!-- PROJECT 1 -->
+
+    <article class="glass card rounded-2xl p-7">
+
+      <div class="text-brand-400 text-2xl mb-4">
+        <i class="fa-solid fa-syringe"></i>
+      </div>
+
+      <h3 class="text-xl font-bold">
+        Vaccine Development for Diarrheagenic E. coli
+      </h3>
+
+      <p class="text-slate-400 text-sm leading-7 mt-3">
+
+        Computational design and simulation of potential
+        vaccine candidates using reverse vaccinology,
+        immunoinformatics, molecular docking and molecular
+        dynamics simulations.
+
+      </p>
+
+    </article>
+
+
+
+    <!-- PROJECT 2 -->
+
+    <article class="glass card rounded-2xl p-7">
+
+      <div class="text-brand-400 text-2xl mb-4">
+        <i class="fa-solid fa-pills"></i>
+      </div>
+
+      <h3 class="text-xl font-bold">
+        Drug Repurposing for Scabies
+      </h3>
+
+      <p class="text-slate-400 text-sm leading-7 mt-3">
+
+        Computational investigation of anti-parasitic
+        candidates including ivermectin, metronidazole
+        and nitazoxanide using pharmacophore modeling
+        and molecular dynamics simulations.
+
+      </p>
+
+    </article>
+
+
+
+    <!-- PROJECT 3 -->
+
+    <article class="glass card rounded-2xl p-7">
+
+      <div class="text-brand-400 text-2xl mb-4">
+        <i class="fa-solid fa-vial-virus"></i>
+      </div>
+
+      <h3 class="text-xl font-bold">
+        Diagnostic Kit for Leishmaniasis
+      </h3>
+
+      <p class="text-slate-400 text-sm leading-7 mt-3">
+
+        Computational and molecular approaches for
+        Leishmaniasis diagnostic development, including
+        molecular assay design and strain identification.
+
+      </p>
+
+    </article>
+
+
+
+    <!-- PROJECT 4 -->
+
+    <article class="glass card rounded-2xl p-7">
+
+      <div class="text-brand-400 text-2xl mb-4">
+        <i class="fa-solid fa-chart-line"></i>
+      </div>
+
+      <h3 class="text-xl font-bold">
+        Real-Time Infectious Disease Detection
+      </h3>
+
+      <p class="text-slate-400 text-sm leading-7 mt-3">
+
+        Bioinformatics and machine-learning pipeline
+        development for real-time detection of emerging
+        infectious diseases.
+
+      </p>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PUBLICATIONS
+========================================================= -->
+
+<section
+  id="publications"
+  class="max-w-7xl mx-auto
+         px-5 lg:px-8
+         py-16"
+>
+
+  <div class="section-title mb-10">
+
+    <h2 class="text-3xl font-bold">
+      Publications
+    </h2>
+
+    <p class="text-slate-400 mt-2">
+      Selected peer-reviewed publications and scholarly work.
+    </p>
+
+  </div>
+
+
+  <div class="space-y-6">
+
+
+    <!-- PUBLICATION 1 -->
+
+    <article class="glass card rounded-2xl p-7">
+
+      <div class="flex gap-5">
+
+        <div class="publication-number">
+          01
+        </div>
+
+
+        <div class="flex-1">
+
+          <div
+            class="flex flex-wrap
+                   items-center
+                   gap-3 mb-4"
+          >
+
+            <span
+              class="px-3 py-1
+                     rounded-full
+                     bg-brand-950
+                     text-brand-400
+                     border border-brand-400/20
+                     text-xs
+                     font-semibold"
+            >
+              PLOS ONE
+            </span>
+
+            <span class="text-xs text-slate-500">
+              2026
+            </span>
+
+          </div>
+
+
+          <h3
+            class="text-xl md:text-2xl
+                   font-bold
+                   leading-snug"
+          >
+
+            <i>In silico</i> design of novel recombinant
+            antigens containing immunologically relevant
+            regions of wild-type and escape mutant variants
+            of HBsAg
+
+          </h3>
+
+
+          <p
+            class="text-slate-400
+                   text-sm
+                   leading-7
+                   mt-4"
+          >
+
+            <strong class="text-slate-300">
+              Authors:
+            </strong>
+
+            YA Workneh,
+            <span class="text-brand-400 font-semibold">
+              DM Sisay
+            </span>,
+            A Fekadu,
+            AT Bika,
+            AT Mogus,
+            T Sisay Tessema
+
+          </p>
+
+
+          <p class="text-slate-500 text-sm mt-2">
+
+            PLOS ONE 21 (3), e0344362
+
+          </p>
+
+
+          <div class="flex flex-wrap gap-3 mt-5">
+
+            <a
+              href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WHw_ONwAAAAJ&citation_for_view=WHw_ONwAAAAJ:d1gkVwhDpl0C"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex
+                     items-center
+                     gap-2
+                     bg-brand-600
+                     hover:bg-brand-500
+                     px-4 py-2.5
+                     rounded-xl
+                     text-sm
+                     font-semibold"
+            >
+
+              <i class="fa-brands fa-google"></i>
+
+              Google Scholar
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- PUBLICATION 2 -->
+
+    <article class="glass card rounded-2xl p-7">
+
+      <div class="flex gap-5">
+
+        <div class="publication-number">
+          02
+        </div>
+
+
+        <div class="flex-1">
+
+          <div
+            class="flex flex-wrap
+                   items-center
+                   gap-3 mb-4"
+          >
+
+            <span
+              class="px-3 py-1
+                     rounded-full
+                     bg-brand-950
+                     text-brand-400
+                     border border-brand-400/20
+                     text-xs
+                     font-semibold"
+            >
+              Bioinformatics and Biology Insights
+            </span>
+
+            <span class="text-xs text-slate-500">
+              2026
+            </span>
+
+          </div>
+
+
+          <h3
+            class="text-xl md:text-2xl
+                   font-bold
+                   leading-snug"
+          >
+
+            <i>In silico</i> Design and Analysis of
+            Engineered Proteins Containing Multi-Epitope
+            and Immunodominant Domains Derived From
+            <i>Rickettsia prowazekii</i> Antigens
+
+          </h3>
+
+
+          <p
+            class="text-slate-400
+                   text-sm
+                   leading-7
+                   mt-4"
+          >
+
+            <strong class="text-slate-300">
+              Authors:
+            </strong>
+
+            MA Abebe,
+            <span class="text-brand-400 font-semibold">
+              DM Sisay
+            </span>,
+            A Fekadu,
+            AT Bika,
+            AT Mogus,
+            TS Tessema
+
+          </p>
+
+
+          <p class="text-slate-500 text-sm mt-2">
+
+            Bioinformatics and Biology Insights 20,
+            11779322261461934
+
+          </p>
+
+
+          <div class="flex flex-wrap gap-3 mt-5">
+
+            <a
+              href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WHw_ONwAAAAJ&citation_for_view=WHw_ONwAAAAJ:u-x6o8ySG0sC"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex
+                     items-center
+                     gap-2
+                     bg-brand-600
+                     hover:bg-brand-500
+                     px-4 py-2.5
+                     rounded-xl
+                     text-sm
+                     font-semibold"
+            >
+
+              <i class="fa-brands fa-google"></i>
+
+              Google Scholar
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- PUBLICATION 3 -->
+
+    <article class="glass card rounded-2xl p-7">
+
+      <div class="flex gap-5">
+
+        <div class="publication-number">
+          03
+        </div>
+
+
+        <div class="flex-1">
+
+          <div
+            class="flex flex-wrap
+                   items-center
+                   gap-3 mb-4"
+          >
+
+            <span
+              class="px-3 py-1
+                     rounded-full
+                     bg-brand-950
+                     text-brand-400
+                     border border-brand-400/20
+                     text-xs
+                     font-semibold"
+            >
+              A Journal of Bioinformatics
+            </span>
+
+            <span class="text-xs text-slate-500">
+              2025
+            </span>
+
+          </div>
+
+
+          <h3
+            class="text-xl md:text-2xl
+                   font-bold
+                   leading-snug"
+          >
+
+            Revolutionizing Vaccine Development:
+            The Transformative Role of Bioinformatics
+            in Designing Next-Generation Immunotherapies
+
+          </h3>
+
+
+          <p
+            class="text-slate-400
+                   text-sm
+                   leading-7
+                   mt-4"
+          >
+
+            <strong class="text-slate-300">
+              Author:
+            </strong>
+
+            <span class="text-brand-400 font-semibold">
+              DM Sisay
+            </span>
+
+          </p>
+
+
+          <p class="text-slate-500 text-sm mt-2">
+
+            A Journal of Bioinformatics 12 (03), 19–33
+
+          </p>
+
+
+          <div class="flex flex-wrap gap-3 mt-5">
+
+            <a
+              href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=WHw_ONwAAAAJ&citation_for_view=WHw_ONwAAAAJ:9yKSN-GCB0IC"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex
+                     items-center
+                     gap-2
+                     bg-brand-600
+                     hover:bg-brand-500
+                     px-4 py-2.5
+                     rounded-xl
+                     text-sm
+                     font-semibold"
+            >
+
+              <i class="fa-brands fa-google"></i>
+
+              Google Scholar
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+
+  <!-- GOOGLE SCHOLAR -->
+
+  <div class="text-center mt-10">
+
+    <a
+      href="https://scholar.google.com/citations?user=WHw_ONwAAAAJ&hl=en"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex
+             items-center
+             gap-2
+             glass
+             px-6 py-3
+             rounded-xl
+             font-semibold
+             hover:text-brand-400"
+    >
+
+      <i class="fa-brands fa-google"></i>
+
+      View Full Google Scholar Profile
+
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SKILLS
+========================================================= -->
+
+<section
+  id="skills"
+  class="max-w-7xl mx-auto
+         px-5 lg:px-8
+         py-16"
+>
+
+  <div class="section-title mb-10">
+
+    <h2 class="text-3xl font-bold">
+      Technical Expertise
+    </h2>
+
+    <p class="text-slate-400 mt-2">
+      Core computational biology, programming and data science capabilities.
+    </p>
+
+  </div>
+
+
+  <div class="grid lg:grid-cols-3 gap-6">
+
+
+    <!-- BIOINFORMATICS -->
+
+    <div class="glass rounded-2xl p-7">
+
+      <h3 class="font-bold text-lg mb-5">
+
+        <i class="fa-solid fa-dna text-brand-400 mr-2"></i>
+
+        Bioinformatics
+
+      </h3>
+
+
+      <div class="flex flex-wrap gap-2">
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Multi-omics Integration
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          NGS Analysis
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Metagenomics
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          GWAS
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Population Genomics
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Phylogeography
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Pangenomics
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Structural Vaccinology
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Immunoinformatics
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- DRUG DISCOVERY -->
+
+    <div class="glass rounded-2xl p-7">
+
+      <h3 class="font-bold text-lg mb-5">
+
+        <i class="fa-solid fa-atom text-brand-400 mr-2"></i>
+
+        Computational Drug Discovery
+
+      </h3>
+
+
+      <div class="flex flex-wrap gap-2">
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Molecular Docking
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Molecular Dynamics
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Drug Repurposing
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Pharmacophore Modeling
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Protein-Ligand Analysis
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Structure-Based Drug Design
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- MACHINE LEARNING -->
+
+    <div class="glass rounded-2xl p-7">
+
+      <h3 class="font-bold text-lg mb-5">
+
+        <i class="fa-solid fa-brain text-brand-400 mr-2"></i>
+
+        Machine Learning
+
+      </h3>
+
+
+      <div class="flex flex-wrap gap-2">
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Feature Engineering
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          SVM
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Random Forest
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          K-means
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          PCA
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          CNN
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          RNN
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Autoencoders
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Graph Neural Networks
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- PROGRAMMING -->
+
+  <div class="grid md:grid-cols-2 gap-6 mt-6">
+
+
+    <div class="glass rounded-2xl p-7">
+
+      <h3 class="font-bold mb-4">
+        Programming & Computing
+      </h3>
+
+      <div class="flex flex-wrap gap-2">
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Python
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          R
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Bash
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Linux
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Database Management
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Server Computing
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- MOLECULAR BIOLOGY -->
+
+    <div class="glass rounded-2xl p-7">
+
+      <h3 class="font-bold mb-4">
+        Molecular & Laboratory Methods
+      </h3>
+
+      <div class="flex flex-wrap gap-2">
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          DNA/RNA Extraction
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          PCR
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Cloning
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Sequencing
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Protein Purification
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          SDS-PAGE
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Western Blotting
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          ELISA
+        </span>
+
+        <span class="skill px-3 py-2 rounded-lg text-sm">
+          Flow Cytometry
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     EDUCATION
+========================================================= -->
+
+<section
+  id="education"
+  class="max-w-7xl mx-auto
+         px-5 lg:px-8
+         py-16"
+>
+
+  <div class="section-title mb-10">
+
+    <h2 class="text-3xl font-bold">
+      Education
+    </h2>
+
+  </div>
+
+
+  <div class="grid md:grid-cols-2 gap-6">
+
+
+    <!-- MSc -->
+
+    <article class="glass card rounded-2xl p-7">
+
+      <div class="flex items-start gap-4">
+
+        <div
+          class="w-12 h-12
+                 rounded-xl
+                 bg-brand-950
+                 text-brand-400
+                 flex items-center
+                 justify-center
+                 shrink-0"
+        >
+
+          <i class="fa-solid fa-graduation-cap"></i>
+
+        </div>
+
+
+        <div>
+
+          <p class="text-brand-400 text-sm font-semibold">
+            2021 – 2023
+          </p>
+
+          <h3 class="text-xl font-bold mt-1">
+            MSc in Bioinformatics
+          </h3>
+
+          <p class="text-slate-300 mt-1">
+            Addis Ababa University, Ethiopia
+          </p>
+
+          <p class="text-slate-400 text-sm mt-3">
+            Grade: 3.8 • Thesis Rating: Excellent
+          </p>
+
+          <p class="text-slate-400 text-sm mt-3">
+
+            <strong>Thesis:</strong>
+
+            Computational Design of Novel Multi-Epitope
+            Antigenic Vaccine Candidates against
+            Diarrheagenic Escherichia coli Epitopes through
+            Integrated Reverse Vaccinology and
+            Immunoinformatic Approaches.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- BSc -->
+
+    <article class="glass card rounded-2xl p-7">
+
+      <div class="flex items-start gap-4">
+
+        <div
+          class="w-12 h-12
+                 rounded-xl
+                 bg-brand-950
+                 text-brand-400
+                 flex items-center
+                 justify-center
+                 shrink-0"
+        >
+
+          <i class="fa-solid fa-dna"></i>
+
+        </div>
+
+
+        <div>
+
+          <p class="text-brand-400 text-sm font-semibold">
+            2016 – 2019
+          </p>
+
+          <h3 class="text-xl font-bold mt-1">
+            BSc in Biotechnology
+          </h3>
+
+          <p class="text-slate-300 mt-1">
+            Aksum University, Ethiopia
+          </p>
+
+          <p class="text-slate-400 text-sm mt-3">
+            Grade: 3.89
+          </p>
+
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TRAINING
+========================================================= -->
+
+<section
+  id="training"
+  class="max-w-7xl mx-auto
+         px-5 lg:px-8
+         py-16"
+>
+
+  <div class="section-title mb-10">
+
+    <h2 class="text-3xl font-bold">
+      Training & Certifications
+    </h2>
+
+    <p class="text-slate-400 mt-2">
+      Selected professional development activities.
+    </p>
+
+  </div>
+
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+
+    <div class="glass card rounded-2xl p-6">
+
+      <h3 class="font-bold">
+        Machine Learning Specialization
+      </h3>
+
+      <p class="text-brand-400 text-sm mt-1">
+        University of Toronto Data School • January 2022
+      </p>
+
+      <p class="text-slate-400 text-sm mt-3">
+        Supervised and unsupervised learning models.
+      </p>
+
+    </div>
+
+
+
+    <div class="glass card rounded-2xl p-6">
+
+      <h3 class="font-bold">
+        H3ABioNet Bioinformatics Workshops
+      </h3>
+
+      <p class="text-brand-400 text-sm mt-1">
+        March 2022
+      </p>
+
+      <p class="text-slate-400 text-sm mt-3">
+        Pangenome analysis, functional annotation and visualization.
+      </p>
+
+    </div>
+
+
+
+    <div class="glass card rounded-2xl p-6">
+
+      <h3 class="font-bold">
+        NGS Data Analysis in SARS-CoV-2
+      </h3>
+
+      <p class="text-brand-400 text-sm mt-1">
+        AHARI & H3ABioNet • March 2022
+      </p>
+
+      <p class="text-slate-400 text-sm mt-3">
+        Genome assembly, variant detection and phylogenetic analysis.
+      </p>
+
+    </div>
+
+
+
+    <div class="glass card rounded-2xl p-6">
+
+      <h3 class="font-bold">
+        EMBL-EBI Bioinformatics Training
+      </h3>
+
+      <p class="text-brand-400 text-sm mt-1">
+        December 2022
+      </p>
+
+      <p class="text-slate-400 text-sm mt-3">
+        Protein structure prediction, sequence alignment and functional genomics.
+      </p>
+
+    </div>
+
+
+
+    <div class="glass card rounded-2xl p-6">
+
+      <h3 class="font-bold">
+        GROMACS Master Class
+      </h3>
+
+      <p class="text-brand-400 text-sm mt-1">
+        Swiss Bioinformatics Institute • March 2023
+      </p>
+
+      <p class="text-slate-400 text-sm mt-3">
+        Molecular dynamics, free-energy calculations and stability analysis.
+      </p>
+
+    </div>
+
+
+
+    <div class="glass card rounded-2xl p-6">
+
+      <h3 class="font-bold">
+        Advanced R Training
+      </h3>
+
+      <p class="text-brand-400 text-sm mt-1">
+        CDT-Africa • October 2024
+      </p>
+
+      <p class="text-slate-400 text-sm mt-3">
+        Data wrangling, visualization and statistical analysis.
+      </p>
+
+    </div>
+
+
+
+    <div class="glass card rounded-2xl p-6">
+
+      <h3 class="font-bold">
+        Leishmaniasis Training Workshop
+      </h3>
+
+      <p class="text-brand-400 text-sm mt-1">
+        COMSTECH & CDT-Africa • May 2024
+      </p>
+
+      <p class="text-slate-400 text-sm mt-3">
+        Diagnostic techniques and molecular characterization.
+      </p>
+
+    </div>
+
+
+
+    <div class="glass card rounded-2xl p-6">
+
+      <h3 class="font-bold">
+        Structural Bioinformatics Training
+      </h3>
+
+      <p class="text-brand-400 text-sm mt-1">
+        CDC Africa • September 2024
+      </p>
+
+      <p class="text-slate-400 text-sm mt-3">
+        Computational modeling for vaccine design and drug-target identification.
+      </p>
+
+    </div>
+
+
+
+    <div class="glass card rounded-2xl p-6">
+
+      <h3 class="font-bold">
+        Biocode Training
+      </h3>
+
+      <p class="text-brand-400 text-sm mt-1">
+        Belgium • August 2023
+      </p>
+
+      <p class="text-slate-400 text-sm mt-3">
+        Advanced BioPython and bioinformatics for research and innovation.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     LANGUAGES
+========================================================= -->
+
+<section
+  class="max-w-7xl mx-auto
+         px-5 lg:px-8
+         py-12"
+>
+
+  <div
+    class="glass
+           rounded-3xl
+           p-8
+           flex flex-col
+           md:flex-row
+           md:items-center
+           md:justify-between
+           gap-6"
+  >
+
+    <div>
+
+      <h2 class="text-2xl font-bold">
+        Languages
+      </h2>
+
+      <p class="text-slate-400 mt-2">
+        English — Fluent • Amharic — Mother Tongue
+      </p>
+
+    </div>
+
+
+    <div class="flex gap-3">
+
+      <span
+        class="px-4 py-2
+               rounded-xl
+               bg-slate-800
+               text-sm"
+      >
+        English
+      </span>
+
+      <span
+        class="px-4 py-2
+               rounded-xl
+               bg-slate-800
+               text-sm"
+      >
+        Amharic
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section
+  id="contact"
+  class="max-w-7xl mx-auto
+         px-5 lg:px-8
+         py-20"
+>
+
+  <div
+    class="glass
+           rounded-3xl
+           p-8 md:p-12
+           text-center"
+  >
+
+    <p
+      class="text-brand-400
+             text-sm
+             font-semibold
+             uppercase
+             tracking-widest"
+    >
+      Get in touch
+    </p>
+
+
+    <h2
+      class="text-3xl
+             md:text-4xl
+             font-bold
+             mt-3"
+    >
+      Let's collaborate on computational biology research.
+    </h2>
+
+
+    <p
+      class="text-slate-400
+             max-w-2xl
+             mx-auto
+             mt-4"
+    >
+
+      For research collaboration, academic discussion,
+      training and computational biology projects, please
+      use the contact details below.
+
+    </p>
+
+
+    <div
+      class="mt-8
+             flex flex-wrap
+             justify-center
+             gap-4"
+    >
+
+      <a
+        href="mailto:melesedes23@gmail.com"
+        class="bg-brand-600
+               hover:bg-brand-500
+               px-6 py-3
+               rounded-xl
+               font-semibold"
+      >
+
+        <i class="fa-solid fa-envelope mr-2"></i>
+
+        Email
+
+      </a>
+
+
+      <a
+        href="mailto:desye.melese@aau.edu.et"
+        class="glass
+               px-6 py-3
+               rounded-xl
+               font-semibold"
+      >
+
+        <i class="fa-solid fa-building-columns mr-2"></i>
+
+        Academic Email
+
+      </a>
+
+
+      <a
+        href="https://linkedin.com/in/DesyeMelese"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="glass
+               px-6 py-3
+               rounded-xl
+               font-semibold"
+      >
+
+        <i class="fa-brands fa-linkedin mr-2"></i>
+
+        LinkedIn
+
+      </a>
+
+
+      <a
+        href="https://scholar.google.com/citations?user=WHw_ONwAAAAJ&hl=en"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="glass
+               px-6 py-3
+               rounded-xl
+               font-semibold"
+      >
+
+        <i class="fa-brands fa-google mr-2"></i>
+
+        Google Scholar
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="border-t border-slate-800 py-8">
+
+  <div
+    class="max-w-7xl mx-auto
+           px-5 lg:px-8
+           flex flex-col
+           md:flex-row
+           justify-between
+           gap-3
+           text-sm
+           text-slate-500"
+  >
+
+    <p>
+      © 2026 Desye Melese Sisay. All rights reserved.
+    </p>
+
+    <p>
+      Bioinformatics • Computational Biology • Drug Discovery • Vaccine Design
+    </p>
+
+  </div>
+
+</footer>
+
+
 </body>
 </html>
