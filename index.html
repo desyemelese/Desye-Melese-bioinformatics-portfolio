@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desye Melese Sisay | Senior Bioinformatician & Consultant</title>
+    <meta name="description" content="Official website of Desye Melese Sisay, Senior Bioinformatician and Computational Biologist offering consulting in NGS analysis, GROMACS simulations, immunoinformatics, and diagnostics development.">
+    <meta name="keywords" content="Desye Melese Sisay, Bioinformatician, Bioinformatics Consultant, GROMACS, Immunoinformatics, NGS, Vaccine Design, Ethiopia Bioinformatics">
+    <meta name="robots" content="index, follow">
+    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -17,21 +21,23 @@
             }
         }
     </script>
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-slate-900 text-slate-100 antialiased font-sans">
 
-    <!-- Header Navigation -->
+    <!-- Navigation Header -->
     <nav class="fixed top-0 w-full bg-slate-900/90 backdrop-blur z-50 border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-xl font-bold tracking-wide text-brand-500">Desye Melese Sisay</a>
             <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-brand-500 transition">About</a>
                 <a href="#services" class="hover:text-brand-500 transition">Services</a>
-                <a href="#expertise" class="hover:text-brand-500 transition">Expertise</a>
+                <a href="#expertise" class="hover:text-brand-500 transition">Skills & Tools</a>
                 <a href="#publications" class="hover:text-brand-500 transition">Publications</a>
                 <a href="#contact" class="hover:text-brand-500 transition">Contact</a>
             </div>
-            <a href="#contact" class="bg-brand-600 hover:bg-brand-500 text-white px-4 py-2 rounded-lg text-sm font-semibold transition">Book Consultation</a>
+            <a href="#contact" class="bg-brand-600 hover:bg-brand-500 text-white px-4 py-2 rounded-lg text-sm font-semibold transition">Hire / Consult</a>
         </div>
     </nav>
 
@@ -45,11 +51,11 @@
                 Transforming Biological Data into Actionable Discovery
             </h1>
             <p class="text-lg text-slate-400 leading-relaxed">
-                Specialized in immunoinformatics, structural modeling, drug target virtual screening, molecular dynamics simulations (GROMACS/Vina), and custom pipeline engineering for academia and biotech.
+                Specialized in NGS data analysis, reverse vaccinology, molecular diagnostics, Machine Learning, structural dynamics (GROMACS/Vina), and custom pipeline automation for academia and biotech.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                <a href="#contact" class="bg-brand-600 hover:bg-brand-500 text-white px-6 py-3 rounded-lg font-semibold text-center transition">Hire My Services</a>
-                <a href="#services" class="border border-slate-700 hover:border-slate-500 text-slate-300 px-6 py-3 rounded-lg font-semibold text-center transition">Explore Offerings</a>
+                <a href="#contact" class="bg-brand-600 hover:bg-brand-500 text-white px-6 py-3 rounded-lg font-semibold text-center transition">Request Consultation</a>
+                <a href="#publications" class="border border-slate-700 hover:border-slate-500 text-slate-300 px-6 py-3 rounded-lg font-semibold text-center transition">View Research</a>
             </div>
         </div>
         <div class="md:w-1/3 mt-12 md:mt-0 flex justify-center">
@@ -57,66 +63,202 @@
                 <div class="w-full h-full bg-slate-900 rounded-2xl flex items-center justify-center border border-slate-800 p-6 text-center">
                     <div>
                         <i class="fa-solid fa-dna text-6xl text-brand-500 mb-4 animate-pulse"></i>
-                        <p class="text-sm font-semibold text-slate-300">Custom Computational Workflows & Structural Analysis</p>
+                        <p class="text-sm font-semibold text-slate-300">Data-Driven Biological Discovery & Scientific Consulting</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Offered Section -->
-    <section id="services" class="py-20 bg-slate-950/50 border-y border-slate-800 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-white">Bioinformatics Services</h2>
-                <p class="text-slate-400 mt-2">End-to-end computational biology solutions for research groups and biotechnology firms.</p>
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-slate-950/40 border-y border-slate-800 px-6">
+        <div class="max-w-5xl mx-auto text-center space-y-4">
+            <h2 class="text-3xl font-bold text-white">About Desye Melese Sisay</h2>
+            <p class="text-slate-300 leading-relaxed text-base md:text-lg">
+                Desye Melese Sisay is a Senior Bioinformatician and Computational Biologist specializing in data-driven biological discovery. Expert in structural bioinformatics, biomolecular modeling, molecular dynamics, and custom pipeline engineering using Python and R. Offering end-to-end analytical services, data visualization, and research consulting for biotech and academia.
+            </p>
+        </div>
+    </section>
+
+    <!-- Core Services Section -->
+    <section id="services" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-white">Bioinformatics & Analytical Services</h2>
+            <p class="text-slate-400 mt-2">End-to-end computational biology solutions for research groups, clinical institutions, and biotech firms.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-slate-900 p-8 rounded-xl border border-slate-800 hover:border-brand-500/50 transition">
+                <i class="fa-solid fa-syringe text-3xl text-brand-500 mb-4"></i>
+                <h3 class="text-xl font-bold text-white mb-2">Reverse Vaccinology & Vaccine Engineering</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Multi-epitope vaccine construct (MEVC) design, recombinant antigen engineering for wild-type & escape mutant variants, immunodominant domain selection, and immune simulation.</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="bg-slate-900 p-8 rounded-xl border border-slate-800 hover:border-brand-500/50 transition">
-                    <i class="fa-solid fa-virus text-3xl text-brand-500 mb-4"></i>
-                    <h3 class="text-xl font-bold text-white mb-2">Reverse Vaccinology & Immunoinformatics</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Multi-epitope vaccine construct design, HTL/CTL epitope prediction, allergenicity/toxicity profiling, and immune simulation.</p>
-                </div>
-                <!-- Service 2 -->
-                <div class="bg-slate-900 p-8 rounded-xl border border-slate-800 hover:border-brand-500/50 transition">
-                    <i class="fa-solid fa-cube text-3xl text-brand-500 mb-4"></i>
-                    <h3 class="text-xl font-bold text-white mb-2">Structural Modeling & Molecular Docking</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Protein structure prediction, model validation (PROCHECK/SAVES), receptor-ligand docking via AutoDock Vina, and virtual screening.</p>
-                </div>
-                <!-- Service 3 -->
-                <div class="bg-slate-900 p-8 rounded-xl border border-slate-800 hover:border-brand-500/50 transition">
-                    <i class="fa-solid fa-chart-line text-3xl text-brand-500 mb-4"></i>
-                    <h3 class="text-xl font-bold text-white mb-2">Molecular Dynamics (MD) Simulations</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Full MD production runs with GROMACS, binding free energy calculations (MM/PBSA), RMSD/RMSF, and essential dynamics analyses.</p>
-                </div>
+            <!-- Service 2 -->
+            <div class="bg-slate-900 p-8 rounded-xl border border-slate-800 hover:border-brand-500/50 transition">
+                <i class="fa-solid fa-dna text-3xl text-brand-500 mb-4"></i>
+                <h3 class="text-xl font-bold text-white mb-2">NGS Data Analysis & Genomics</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">RNA-Seq differential expression, Whole Genome Sequencing (WGS), variant calling and annotation (GATK), metagenomics, and comparative phylogenomics.</p>
+            </div>
+            <!-- Service 3 -->
+            <div class="bg-slate-900 p-8 rounded-xl border border-slate-800 hover:border-brand-500/50 transition">
+                <i class="fa-solid fa-cubes text-3xl text-brand-500 mb-4"></i>
+                <h3 class="text-xl font-bold text-white mb-2">Structural Modeling & MD Simulations</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Protein 3D modeling (AlphaFold2/MODELLER), receptor-ligand molecular docking (AutoDock Vina), extended GROMACS MD simulations, and MM/PBSA binding free energy calculation.</p>
+            </div>
+            <!-- Service 4 -->
+            <div class="bg-slate-900 p-8 rounded-xl border border-slate-800 hover:border-brand-500/50 transition">
+                <i class="fa-solid fa-vial-circle-check text-3xl text-brand-500 mb-4"></i>
+                <h3 class="text-xl font-bold text-white mb-2">Diagnostics & Biomarker Discovery</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Molecular diagnostics target selection, biomarker identification, high-specificity multiplex PCR/qPCR primer design, and off-target cross-reactivity profiling.</p>
+            </div>
+            <!-- Service 5 -->
+            <div class="bg-slate-900 p-8 rounded-xl border border-slate-800 hover:border-brand-500/50 transition">
+                <i class="fa-solid fa-diagram-project text-3xl text-brand-500 mb-4"></i>
+                <h3 class="text-xl font-bold text-white mb-2">Pipeline Automation & Machine Learning</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Custom bioinformatics pipeline development using Nextflow, Snakemake, Python, and R, alongside Machine Learning models for biological feature classification.</p>
+            </div>
+            <!-- Service 6 -->
+            <div class="bg-slate-900 p-8 rounded-xl border border-slate-800 hover:border-brand-500/50 transition">
+                <i class="fa-solid fa-pills text-3xl text-brand-500 mb-4"></i>
+                <h3 class="text-xl font-bold text-white mb-2">Drug Repurposing & Target Screening</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Virtual screening of small molecules, natural products, and antiparasitic compounds against receptors, channels, and metabolic enzymes.</p>
             </div>
         </div>
     </section>
 
-    <!-- Technical Expertise Section -->
-    <section id="expertise" class="py-20 px-6 max-w-7xl mx-auto">
-        <h2 class="text-3xl font-bold text-white text-center mb-12">Toolstack & Capabilities</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div class="bg-slate-900/60 p-6 rounded-lg border border-slate-800">
-                <i class="fa-brands fa-python text-3xl text-brand-500 mb-2"></i>
-                <h4 class="font-bold text-white">Python & R</h4>
-                <p class="text-xs text-slate-400 mt-1">Biopython, pandas, GeoPandas, ggplot2</p>
+    <!-- Comprehensive Skills Grid -->
+    <section id="expertise" class="py-20 px-6 max-w-7xl mx-auto border-t border-slate-800">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-white">Comprehensive Technical & Domain Skills</h2>
+            <p class="text-slate-400 mt-2">End-to-end capabilities across cutting-edge bioinformatics, AI, and computational tools.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <!-- Category 1: NGS & Genomics -->
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <i class="fa-solid fa-microscope text-3xl text-brand-500 mb-3"></i>
+                <h3 class="text-lg font-bold text-white mb-3">NGS & Genomics</h3>
+                <ul class="text-sm text-slate-400 space-y-2">
+                    <li>• RNA-Seq Differential Expression (DESeq2, edgeR)</li>
+                    <li>• Whole Genome Sequencing (WGS) & Resequencing</li>
+                    <li>• Variant Calling & Annotation (GATK, FreeBayes)</li>
+                    <li>• Metagenomics & Microbiome Analysis (QIIME2, Kraken)</li>
+                    <li>• Comparative Phylogenomics & MicroRNA Profiling</li>
+                </ul>
             </div>
-            <div class="bg-slate-900/60 p-6 rounded-lg border border-slate-800">
-                <i class="fa-solid fa-atom text-3xl text-brand-500 mb-2"></i>
-                <h4 class="font-bold text-white">GROMACS & Vina</h4>
-                <p class="text-xs text-slate-400 mt-1">MD Simulations, Docking, Free Energy</p>
+
+            <!-- Category 2: Vaccine Engineering -->
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <i class="fa-solid fa-shield-halved text-3xl text-brand-500 mb-3"></i>
+                <h3 class="text-lg font-bold text-white mb-3">Vaccine & Antigen Design</h3>
+                <ul class="text-sm text-slate-400 space-y-2">
+                    <li>• Immunodominant Domain & Epitope Mapping (HTL/CTL/B-cell)</li>
+                    <li>• Wild-type & Escape Mutant Recombinant Antigens</li>
+                    <li>• Linker Engineering, Adjuvants & Physico-chemical Profiling</li>
+                    <li>• Immune Simulation (C-ImmSim) & World Population Coverage</li>
+                </ul>
             </div>
-            <div class="bg-slate-900/60 p-6 rounded-lg border border-slate-800">
-                <i class="fa-solid fa-microscope text-3xl text-brand-500 mb-2"></i>
-                <h4 class="font-bold text-white">PyMOL & Chimera</h4>
-                <p class="text-xs text-slate-400 mt-1">3D Structure Visualization & Rendering</p>
+
+            <!-- Category 3: Diagnostics & Biomarkers -->
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <i class="fa-solid fa-vial text-3xl text-brand-500 mb-3"></i>
+                <h3 class="text-lg font-bold text-white mb-3">Diagnostics & Biomarkers</h3>
+                <ul class="text-sm text-slate-400 space-y-2">
+                    <li>• Diagnostic Biomarker Discovery & Feature Selection</li>
+                    <li>• High-Specificity Primer & Probe Design (PCR, qPCR, Multiplex)</li>
+                    <li>• Molecular Diagnostics Target Selection</li>
+                    <li>• In Silico Off-Target BLAST & Cross-Reactivity Screening</li>
+                </ul>
             </div>
-            <div class="bg-slate-900/60 p-6 rounded-lg border border-slate-800">
-                <i class="fa-solid fa-terminal text-3xl text-brand-500 mb-2"></i>
-                <h4 class="font-bold text-white">Linux & HPC</h4>
-                <p class="text-xs text-slate-400 mt-1">Bash Scripting, SLURM, Cluster Workflows</p>
+
+            <!-- Category 4: Structural Biology -->
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <i class="fa-solid fa-atom text-3xl text-brand-500 mb-3"></i>
+                <h3 class="text-lg font-bold text-white mb-3">Structural Biology & MD</h3>
+                <ul class="text-sm text-slate-400 space-y-2">
+                    <li>• Structure Prediction (AlphaFold2, Swiss-Model, MODELLER)</li>
+                    <li>• Receptor-Ligand & Protein Docking (AutoDock Vina, HADDOCK)</li>
+                    <li>• Extended MD Simulations (GROMACS) & Free Energy (MM/PBSA)</li>
+                    <li>• Structural Quality Validation (PROCHECK, SAVES, Ramachandran)</li>
+                </ul>
+            </div>
+
+            <!-- Category 5: Machine Learning & Coding -->
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <i class="fa-solid fa-brain text-3xl text-brand-500 mb-3"></i>
+                <h3 class="text-lg font-bold text-white mb-3">Programming & AI / ML</h3>
+                <ul class="text-sm text-slate-400 space-y-2">
+                    <li>• Python (Biopython, pandas, scikit-learn, GeoPandas, Plotly)</li>
+                    <li>• R Programming (Bioconductor, ggplot2, DESeq2)</li>
+                    <li>• Machine Learning Models for Biological Classification</li>
+                    <li>• Linux Shell Scripting (Bash) & HPC Job Execution (SLURM)</li>
+                </ul>
+            </div>
+
+            <!-- Category 6: Pipelines & Workflows -->
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                <i class="fa-solid fa-code-branch text-3xl text-brand-500 mb-3"></i>
+                <h3 class="text-lg font-bold text-white mb-3">Workflows & Pipelines</h3>
+                <ul class="text-sm text-slate-400 space-y-2">
+                    <li>• Automated Pipeline Engineering & Containerization</li>
+                    <li>• Workflow Managers (Nextflow, Snakemake, Galaxy)</li>
+                    <li>• Docker / Singularity Reproducible Environments</li>
+                    <li>• Spatial Data & Geospatial Density Visualization</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Peer-Reviewed Publications Section -->
+    <section id="publications" class="py-20 px-6 max-w-7xl mx-auto border-t border-slate-800">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-white">Peer-Reviewed Publications</h2>
+            <p class="text-slate-400 mt-2">Selected research in antigen design, immunoinformatics, and structural biology.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Publication 1 -->
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-brand-500/50 transition flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between text-xs text-brand-500 font-semibold uppercase mb-3">
+                        <span>PLOS ONE</span>
+                        <span>2026</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 leading-snug">
+                        In silico design of novel recombinant antigens containing immunologically relevant regions of wild-type and escape mutant variants of HBsAg
+                    </h3>
+                    <p class="text-slate-400 text-sm mb-4">
+                        YA Workneh, <strong>DM Sisay</strong>, A Fekadu, AT Bika, AT Mogus, T Sisay Tessema. <em>PLOS ONE</em> 21 (3), e0344362.
+                    </p>
+                </div>
+                <div class="flex items-center space-x-4 text-xs font-semibold pt-4 border-t border-slate-800">
+                    <a href="https://doi.org/10.1371/journal.pone.0344362" target="_blank" class="text-brand-500 hover:underline flex items-center gap-1">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> View Article (PLOS ONE)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Publication 2 -->
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 hover:border-brand-500/50 transition flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between text-xs text-brand-500 font-semibold uppercase mb-3">
+                        <span>Bioinformatics & Biology Insights</span>
+                        <span>2026</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 leading-snug">
+                        In silico Design and Analysis of Engineered Proteins Containing Multi-Epitope and Immunodominant Domains Derived From Rickettsia prowazekii Antigens
+                    </h3>
+                    <p class="text-slate-400 text-sm mb-4">
+                        MA Abebe, <strong>DM Sisay</strong>, A Fekadu, AT Bika, AT Mogus, TS Tessema. <em>Bioinformatics and Biology Insights</em> 20, 11779322261461934.
+                    </p>
+                </div>
+                <div class="flex items-center space-x-4 text-xs font-semibold pt-4 border-t border-slate-800">
+                    <a href="https://journals.sagepub.com/home/bbi" target="_blank" class="text-brand-500 hover:underline flex items-center gap-1">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> View Journal Page
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -125,9 +267,9 @@
     <section id="contact" class="py-20 bg-slate-950/50 border-t border-slate-800 px-6">
         <div class="max-w-3xl mx-auto">
             <h2 class="text-3xl font-bold text-white text-center mb-4">Request Consultation or Analysis</h2>
-            <p class="text-slate-400 text-center mb-10">Send your project requirements or research inquiries directly.</p>
+            <p class="text-slate-400 text-center mb-10">Send your project requirements or research inquiry directly.</p>
 
-            <form class="space-y-6" onsubmit="event.preventDefault(); alert('Message submitted successfully!');">
+            <form class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you, Desye will receive your inquiry shortly.');">
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-sm font-medium text-slate-300 mb-2">Your Name</label>
@@ -142,14 +284,16 @@
                     <label class="block text-sm font-medium text-slate-300 mb-2">Service Required</label>
                     <select class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-500">
                         <option>Vaccine Design & Immunoinformatics</option>
+                        <option>NGS & Genomics Data Analysis</option>
+                        <option>Molecular Diagnostics Target & Primer Design</option>
                         <option>Molecular Docking & Virtual Screening</option>
                         <option>Molecular Dynamics Simulation (GROMACS)</option>
-                        <option>Custom Pipeline Engineering / Training</option>
+                        <option>Custom Pipeline Engineering & ML Workflows</option>
                     </select>
                 </div>
                 <div>
                     <label class="block text-sm font-medium text-slate-300 mb-2">Project Details</label>
-                    <textarea rows="5" required class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-500" placeholder="Describe your target protein, pathogen, or computational requirements..."></textarea>
+                    <textarea rows="5" required class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-500" placeholder="Describe your target protein, biological data, pathogen, or computational requirements..."></textarea>
                 </div>
                 <button type="submit" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-3 rounded-lg transition">Send Inquiry</button>
             </form>
@@ -158,7 +302,7 @@
 
     <!-- Footer -->
     <footer class="py-8 text-center text-slate-500 text-sm border-t border-slate-900">
-        <p>&copy; 2026 Desye Melese Sisay. Senior Bioinformatician.</p>
+        <p>&copy; 2026 Desye Melese Sisay. Senior Bioinformatician & Computational Biologist.</p>
     </footer>
 </body>
 </html>
