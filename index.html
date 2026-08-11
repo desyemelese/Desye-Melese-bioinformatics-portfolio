@@ -32,40 +32,16 @@
 
     <!-- 1. MAIN DASHBOARD OVERVIEW PANEL -->
     <div id="panel-dashboard" class="tab-panel space-y-12">
-        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl flex flex-col md:flex-row items-center gap-8">
-            <!-- Profile Photo Container -->
-            <div class="relative shrink-0">
-                <div class="w-40 h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden border-2 border-brand-500/40 shadow-xl shadow-brand-500/10">
-                    <img src="Desye _Head shout.jpg" alt="Desye Melese" class="w-full h-full object-cover object-top">
-                </div>
-                <div class="absolute -bottom-2 -right-2 bg-slate-950 text-brand-400 text-[10px] font-bold px-2.5 py-1 rounded-md border border-slate-800 flex items-center gap-1 shadow">
-                    <i class="fa-solid fa-circle-check text-brand-500"></i> Academic & Researcher
-                </div>
-            </div>
-
-            <!-- Profile Info & Bio -->
-            <div class="space-y-3 text-center md:text-left">
-                <span class="bg-brand-900/60 text-brand-400 border border-brand-500/30 text-xs px-3 py-1 rounded-full font-semibold">
-                    Bioinformatics & Biotechnology Specialist
-                </span>
-                <h2 class="text-3xl font-bold text-white">Desye Melese</h2>
-                <p class="text-slate-400 text-sm max-w-2xl leading-relaxed">
-                    Lecturer & Researcher at Wollo University and collaborator with CDT-Africa. Specializing in computational biology, structural bioinformatics, immunoinformatics, vaccine candidate design, and molecular dynamics simulations.
-                </p>
-                <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-3">
-                    <button onclick="switchTab('publications')" class="bg-brand-600 hover:bg-brand-500 text-white text-xs px-4 py-2 rounded-lg font-semibold transition">
-                        View Research Papers
-                    </button>
-                    <button onclick="switchTab('courses')" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs px-4 py-2 rounded-lg font-semibold transition">
-                        Wollo Univ. Modules
-                    </button>
-                </div>
-            </div>
+        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl">
+            <h2 class="text-2xl font-bold text-white mb-2">Welcome to the Research & Academic Hub</h2>
+            <p class="text-slate-400 text-sm max-w-3xl leading-relaxed">
+                Select a tab from the top navigation bar to access detailed research publication archives, computational biology software stacks, specialized consulting services, or university course modules.
+            </p>
         </div>
 
         <!-- Professional Experience Summary Cards -->
         <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-slate-900 p-8 rounded-xl border border-slate-800 hover:border-brand-500/30 transition">
+            <div class="bg-slate-900 p-8 rounded-xl border border-slate-800">
                 <div class="flex items-center space-x-4 mb-4">
                     <div class="w-12 h-12 bg-brand-900/50 rounded-lg flex items-center justify-center border border-brand-500/30 text-brand-500 text-xl font-bold">WU</div>
                     <div>
@@ -77,7 +53,7 @@
                 <button onclick="switchTab('courses')" class="text-xs text-brand-500 hover:underline font-semibold">View Course Materials &rarr;</button>
             </div>
 
-            <div class="bg-slate-900 p-8 rounded-xl border border-slate-800 hover:border-brand-500/30 transition">
+            <div class="bg-slate-900 p-8 rounded-xl border border-slate-800">
                 <div class="flex items-center space-x-4 mb-4">
                     <div class="w-12 h-12 bg-brand-900/50 rounded-lg flex items-center justify-center border border-brand-500/30 text-brand-500 text-xl font-bold">CDT</div>
                     <div>
@@ -93,14 +69,9 @@
 
     <!-- 2. PUBLICATIONS PANEL -->
     <div id="panel-publications" class="tab-panel hidden space-y-6">
-        <div class="flex justify-between items-center border-b border-slate-800 pb-4">
-            <div>
-                <h2 class="text-2xl font-bold text-white">Peer-Reviewed Publications & Manuscripts</h2>
-                <p class="text-slate-400 text-sm mt-1">Research papers in immunoinformatics, reverse vaccinology, molecular docking, and drug discovery.</p>
-            </div>
-            <button onclick="switchTab('dashboard')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-3 py-1.5 rounded-lg font-medium transition shrink-0">
-                <i class="fa-solid fa-arrow-left mr-1"></i> Back
-            </button>
+        <div class="border-b border-slate-800 pb-4">
+            <h2 class="text-2xl font-bold text-white">Peer-Reviewed Publications & Manuscripts</h2>
+            <p class="text-slate-400 text-sm mt-1">Research papers in immunoinformatics, reverse vaccinology, molecular docking, and drug discovery.</p>
         </div>
 
         <div class="space-y-4">
@@ -120,14 +91,9 @@
 
     <!-- 3. SKILLS & TOOLS PANEL -->
     <div id="panel-skills" class="tab-panel hidden space-y-6">
-        <div class="flex justify-between items-center border-b border-slate-800 pb-4">
-            <div>
-                <h2 class="text-2xl font-bold text-white">Technical Skills & Software Stacks</h2>
-                <p class="text-slate-400 text-sm mt-1">Computational pipelines, programming languages, and molecular modeling tools.</p>
-            </div>
-            <button onclick="switchTab('dashboard')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-3 py-1.5 rounded-lg font-medium transition shrink-0">
-                <i class="fa-solid fa-arrow-left mr-1"></i> Back
-            </button>
+        <div class="border-b border-slate-800 pb-4">
+            <h2 class="text-2xl font-bold text-white">Technical Skills & Software Stacks</h2>
+            <p class="text-slate-400 text-sm mt-1">Computational pipelines, programming languages, and molecular modeling tools.</p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-6">
@@ -165,14 +131,9 @@
 
     <!-- 4. SERVICES & TRAINING PANEL -->
     <div id="panel-services" class="tab-panel hidden space-y-6">
-        <div class="flex justify-between items-center border-b border-slate-800 pb-4">
-            <div>
-                <h2 class="text-2xl font-bold text-white">Services & Professional Training Programs</h2>
-                <p class="text-slate-400 text-sm mt-1">Intensive 3-month (minimum 12-week) capacity building workshops starting from 35,000 ETB.</p>
-            </div>
-            <button onclick="switchTab('dashboard')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-3 py-1.5 rounded-lg font-medium transition shrink-0">
-                <i class="fa-solid fa-arrow-left mr-1"></i> Back
-            </button>
+        <div class="border-b border-slate-800 pb-4">
+            <h2 class="text-2xl font-bold text-white">Services & Professional Training Programs</h2>
+            <p class="text-slate-400 text-sm mt-1">Intensive 3-month (minimum 12-week) capacity building workshops starting from 35,000 ETB.</p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-6">
@@ -207,14 +168,9 @@
 
     <!-- 5. WOLLO UNIVERSITY COURSES PANEL -->
     <div id="panel-courses" class="tab-panel hidden space-y-6">
-        <div class="flex justify-between items-center border-b border-slate-800 pb-4">
-            <div>
-                <h2 class="text-2xl font-bold text-white">Wollo University Course Hub</h2>
-                <p class="text-slate-400 text-sm mt-1">Select a course to open module documents, lecture files, video links, and past exam sets.</p>
-            </div>
-            <button onclick="switchTab('dashboard')" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-3 py-1.5 rounded-lg font-medium transition shrink-0">
-                <i class="fa-solid fa-arrow-left mr-1"></i> Back
-            </button>
+        <div class="border-b border-slate-800 pb-4">
+            <h2 class="text-2xl font-bold text-white">Wollo University Course Hub</h2>
+            <p class="text-slate-400 text-sm mt-1">Select a course to open module documents, lecture files, video links, and past exam sets.</p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -263,3 +219,32 @@
     </div>
 
 </main>
+
+<!-- JAVASCRIPT FOR DYNAMIC TAB SWITCHING -->
+<script>
+    function switchTab(tabId) {
+        // Hide all panels
+        document.querySelectorAll('.tab-panel').forEach(panel => {
+            panel.classList.add('hidden');
+        });
+
+        // Reset button styles
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.classList.remove('bg-brand-600', 'text-white');
+            btn.classList.add('bg-slate-800', 'text-slate-300');
+        });
+
+        // Show selected panel
+        const selectedPanel = document.getElementById('panel-' + tabId);
+        if (selectedPanel) {
+            selectedPanel.classList.remove('hidden');
+        }
+
+        // Highlight selected tab button
+        const selectedTab = document.getElementById('tab-' + tabId);
+        if (selectedTab) {
+            selectedTab.classList.remove('bg-slate-800', 'text-slate-300');
+            selectedTab.classList.add('bg-brand-600', 'text-white');
+        }
+    }
+</script>
